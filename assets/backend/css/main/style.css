@@ -1,0 +1,9 @@
+@media (min-width: 768px) {
+    .notice-inline {
+        display: inline-block;
+        max-width: 33%;
+        max-width: calc(33% - 20px);
+        margin-right: 20px !important;
+        vertical-align: top;
+    }
+}

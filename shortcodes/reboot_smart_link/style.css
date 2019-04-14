@@ -1,0 +1,95 @@
+.c-reboot-smart-link,
+.c-reboot-smart-link__title,
+.c-reboot-smart-link__description {
+    -webkit-transition: all .3s ease-in-out !important;
+    transition: all .3s ease-in-out !important;
+}
+
+.c-reboot-smart-link {
+    position: absolute;
+    z-index: 10;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+
+    display: block;
+
+    color: inherit !important;
+    text-decoration: none !important;
+
+    opacity: 0;
+
+    -webkit-transition: all .3s ease-in-out;
+    transition: all .3s ease-in-out;
+
+    cursor: default;
+}
+
+a.c-reboot-smart-link {
+    cursor: pointer;
+}
+
+.c-reboot-smart-link__content {
+    position: absolute;
+    z-index: 10;
+    top: 20px;
+    right: 20px;
+    bottom: 20px;
+    left: 20px;
+
+    background-color: #fff;
+    box-shadow: 0 0 6px rgba(0,0,0,0.2), 0 0 30px rgba(0,0,0,0.2);
+
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    justify-content: flex-end;
+
+    padding: 30px;
+}
+
+.c-reboot-smart-link__title {
+    margin: 0;
+    padding: 0;
+
+    -webkit-transform: translateY(10px);
+    transform: translateY(10px);
+}
+
+.c-reboot-smart-link__description {
+    margin: 5px 0 0;
+    padding: 0;
+
+    -webkit-transform: translateY(20px);
+    transform: translateY(20px);
+
+    line-height: 1.3;
+}
+
+.c-reboot-smart-link__description p:last-child {
+    margin-bottom: 0;
+}
+
+/**
+ * Hover
+ */
+
+.c-reboot-smart-link:hover  {
+    opacity: 1;
+    background-color: rgba(255,185,1,0.8);
+}
+
+.c-reboot-smart-link:hover .c-reboot-smart-link__title,
+.c-reboot-smart-link:hover .c-reboot-smart-link__description {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+}
+
+/**
+ * Utilities
+ */
+
+.u-position-relative {
+    position: relative !important;
+}

@@ -1,0 +1,88 @@
+/**
+ * Admin Bar
+ */
+
+#wp-admin-bar-wp-logo .ab-item [class*="dashicons-"] {
+    font-size: 20px;
+}
+
+#wp-admin-bar-wp-logo .ab-item [class*="dashicons-"]:before {
+    top: 2px;
+}
+
+@media (max-width: 782px) {
+
+    #wp-admin-bar-wp-logo .ab-item {
+        width: 52px !important;
+        text-align: center;
+    }
+
+    #wp-admin-bar-wp-logo .ab-item [class*="dashicons-"] {
+        font-size: 24px;
+        vertical-align: middle;
+    }
+}
+
+.wpb_vc_param_value.content.textarea_html {
+    display: none !important;
+}
+
+/**
+ * u-text-white
+ */
+
+.u-text-white,
+.u-text-white .aio-icon-title,
+.u-text-white .aio-icon {
+    color: #fff !important;
+}
+
+/**
+ * has-grayscale-image-hover
+ */
+
+#main .has-grayscale-image-hover img {
+    -webkit-filter: grayscale(100%); /* For Webkit browsers */
+    -webkit-transition: .5s ease-in-out; /* For Webkit browsers */
+    -moz-filter: grayscale(100%); /* For Firefox */
+    -moz-transition: .5s ease-in-out; /* For Firefox */
+    -o-filter: grayscale(100%);
+    -o-transition: .5s ease-in-out;
+
+    opacity: 0.4;
+}
+
+#main .has-grayscale-image-hover img:hover,
+#main .has-grayscale-image-hover a:hover > img {
+    -webkit-filter: grayscale(0%); /* For Webkit browsers */
+    -webkit-transition: .5s ease-in-out; /* For Webkit browsers */
+    -moz-filter: grayscale(0%); /* For Firefox */
+    -moz-transition: .5s ease-in-out; /* For FireFox */
+    -o-filter: grayscale(0%);
+    -o-transition: .5s ease-in-out;
+
+    opacity: 1;
+}
+
+/**
+ * The 7 fixes
+ */
+
+.dt-gallery-container {
+    text-align: center;
+}
+
+.screen-reader-text,
+.u-hidden-visually {
+    border: 0 !important;
+    clip: rect(0 0 0 0) !important;
+    -webkit-clip-path: inset(50%) !important;
+    clip-path: inset(50%) !important;
+    height: 1px !important;
+    margin: -1px !important;
+    overflow: hidden !important;
+    padding: 0 !important;
+    position: absolute !important;
+    white-space: nowrap !important;
+    width: 1px !important;
+}

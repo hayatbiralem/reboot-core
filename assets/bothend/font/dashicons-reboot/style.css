@@ -1,0 +1,37 @@
+@font-face {
+  font-family: 'dashicons-reboot';
+  src:
+    url('fonts/dashicons-reboot.ttf?al79pf') format('truetype'),
+    url('fonts/dashicons-reboot.woff?al79pf') format('woff'),
+    url('fonts/dashicons-reboot.svg?al79pf#dashicons-reboot') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="dashicons-reboot-"], [class*=" dashicons-reboot-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'dashicons-reboot' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.dashicons-reboot-brain-work:before {
+  content: "\e902";
+}
+.dashicons-reboot-fevreka:before {
+  content: "\e900";
+}
+.dashicons-reboot-irm-digital:before {
+  content: "\e901";
+}
+.dashicons-reboot-reboot:before {
+  content: "\e903";
+}

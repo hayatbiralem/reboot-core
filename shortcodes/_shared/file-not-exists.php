@@ -1,0 +1,1 @@
+<p><?= sprintf( __('File not exists: %s', REBOOT_TEXT_DOMAIN), $file ) ?></p>
