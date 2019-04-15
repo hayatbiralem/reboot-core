@@ -248,3 +248,5 @@ Or you can override all settings defined in [official documentation](https://cod
 
 - You can use `Pages > Sample page` for home page. We think that is a cute detail :)
 - If you have WP Bakery Visual Composer, you don't have to install the [Classic Editor](https://wordpress.org/plugins/classic-editor/) plugin because VC has a setting for that under the global settings: `Disable Gutenberg Editor`;
+
+### To be continued...
