@@ -138,7 +138,7 @@ TODO:
 
 #### Fonts
 
-You should use [icomoon](https://icomoon.io/app) for generation icon fonts.
+You should use [icomoon](https://icomoon.io/app) for generating icon fonts.
 
 We recommend that you should prevent your custom font with `dashicons-` (like font name `dashicons-my-client` and font prefix `dashicons-my-client-`) so you can use that font icons as admin menu icon and The7 shows your icons correctly.
 
@@ -152,7 +152,7 @@ You should generate this icon packages by [icomoon](https://icomoon.io/app) as w
 
 ## Change Admin Icons
 
-If you want to use your custom icons or [official wordpress dashicons](https://developer.wordpress.org/resource/dashicons/) as agency admin menu icon you can override it from your child theme's config file with this:
+If you want to use your custom icon or an [official wordpress dashicons](https://developer.wordpress.org/resource/dashicons/) icon as agency admin menu icon you can override it from your child theme's config file with this:
 
 ```php
 <?php
