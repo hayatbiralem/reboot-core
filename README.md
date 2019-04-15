@@ -201,7 +201,6 @@ function my_client_custom_post_types($post_types)
         'remove_meta_boxes' => [
             'wpseo_meta' => 'normal',
             'mymetabox_revslider_0' => 'normal',
-            'airportdiv' => 'side',
             'locationdiv' => 'side',
         ],
         'args' => [
