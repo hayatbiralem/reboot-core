@@ -130,11 +130,11 @@ Samples:
 
   - themes/{my-client}/reboot/assets/frontend/css/my-frontend-fixes/style.css`
   - themes/{my-client}/reboot/assets/bothend/font/my-icomoon-font/style.css`
-  - themes/{my-client}/reboot/assets/backend/font/my-admin-scripts/script.css`
+  - themes/{my-client}/reboot/assets/backend/font/my-admin-scripts/script.js`
   
 TODO:
 
-  [ ] We need to add complex styles and scripts like vendors without changing their file names.
+  - [ ] We need to add complex styles and scripts like vendors without changing their file names.
 
 #### Fonts
 
