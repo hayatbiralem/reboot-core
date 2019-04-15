@@ -84,7 +84,7 @@ First tasks to begin real work.
 
 ## Demo Import
 
-We do not recommend to use `Demo Import`. Because of prevent unwanted content in our project and learn how to use The7 well.
+We do not recommend to use `Demo Import`. Because we want to prevent unwanted content in our project and learn how to use The7 well.
 
 But you could use demo import at another dummy installation to look what is the right way to achieve that look for settings and/or page content.
 
@@ -106,7 +106,7 @@ if(function_exists('reboot_include_folder')) {
 }
 ```
 
-After this, when you create som php file in `classes` folder, that automatically included to project.
+After this, when you create a php file in `classes` folder, that file automatically included to project.
 
 We recommend that you can create one small file for each specific task. This helps you to organize things.
 
