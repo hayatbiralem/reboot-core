@@ -34,8 +34,8 @@ if (!defined('REBOOT_AGENCY_SLUG')) {
     define('REBOOT_AGENCY_SLUG', reboot_key(REBOOT_AGENCY));
 }
 
-if (!defined('REBOOT_AGENCY_ICON')) {
-    define('REBOOT_AGENCY_ICON', REBOOT_AGENCY_SLUG);
+if (!defined('REBOOT_AGENCY_MENU_ICON')) {
+    define('REBOOT_AGENCY_MENU_ICON', sprintf('dashicons-reboot-%s', REBOOT_AGENCY_SLUG));
 }
 
 if (!defined('REBOOT_AGENCY_EMAIL')) {

@@ -45,6 +45,9 @@ if(!class_exists('REBOOT_CORE')) {
     define('REBOOT_SHORTCODES_PATH', REBOOT_CORE_PATH . 'shortcodes/');
     define('REBOOT_SHORTCODES_URL', REBOOT_CORE_URL . 'shortcodes/');
 
+    define('REBOOT_CHILD_TGMPA_PATH', REBOOT_CHILD_PATH . REBOOT_DIRECTORY_NAME . '/tgmpa/');
+    define('REBOOT_CHILD_TGMPA_PLUGINS_PATH', REBOOT_CHILD_TGMPA_PATH . 'plugins/');
+
     require REBOOT_CORE_PATH . 'config.php';
     require REBOOT_CORE_PATH . 'bootstrap.php';
 

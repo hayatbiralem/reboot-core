@@ -13,35 +13,30 @@ global $reboot_tgmpa_plugins;
 
 $reboot_tgmpa_plugins = array(
 
+//    [
+//        'plugin_file'        => 'clean-image-filenames/clean-image-filenames.php',
+//        'is_plugin_active'   => is_plugin_active('clean-image-filenames/clean-image-filenames.php'),
+//    ],
+
+    [
+        'name' => '404page – your smart custom 404 error page',
+        'slug' => '404page',
+        'is_callable' => '',
+        'required' => false,
+        'force_activation' => false,
+    ],
+
+    [
+        'name' => 'Classic Editor',
+        'slug' => 'classic-editor',
+        'is_callable' => '',
+        'required' => false,
+        'force_activation' => false,
+    ],
+
     [
         'name' => 'Clean Image Filenames',
         'slug' => 'clean-image-filenames',
-        'is_callable' => '',
-        'required' => false,
-        'force_activation' => false,
-        // 'plugin_file'        => 'clean-image-filenames/clean-image-filenames.php',
-        // 'is_plugin_active'   => is_plugin_active('clean-image-filenames/clean-image-filenames.php'),
-    ],
-
-    [
-        'name' => 'Yoast SEO',
-        'slug' => 'wordpress-seo',
-        'is_callable' => '',
-        'required' => false,
-        'force_activation' => false,
-    ],
-
-    [
-        'name' => 'Disable Comments',
-        'slug' => 'disable-comments',
-        'is_callable' => '',
-        'required' => false,
-        'force_activation' => false,
-    ],
-
-    [
-        'name' => 'Duplicate Post',
-        'slug' => 'duplicate-post',
         'is_callable' => '',
         'required' => false,
         'force_activation' => false,
@@ -64,16 +59,16 @@ $reboot_tgmpa_plugins = array(
     ],
 
     [
-        'name' => 'WP Fastest Cache',
-        'slug' => 'wp-fastest-cache',
+        'name' => 'Disable All WordPress Updates',
+        'slug' => 'disable-wordpress-updates',
         'is_callable' => '',
         'required' => false,
         'force_activation' => false,
     ],
 
     [
-        'name' => 'WP Migrate DB',
-        'slug' => 'wp-migrate-db',
+        'name' => 'Disable Comments',
+        'slug' => 'disable-comments',
         'is_callable' => '',
         'required' => false,
         'force_activation' => false,
@@ -88,8 +83,64 @@ $reboot_tgmpa_plugins = array(
     ],
 
     [
+        'name' => 'Duplicate Post',
+        'slug' => 'duplicate-post',
+        'is_callable' => '',
+        'required' => false,
+        'force_activation' => false,
+    ],
+
+    [
+        'name' => 'Easy Updates Manager',
+        'slug' => 'stops-core-theme-and-plugin-updates',
+        'is_callable' => '',
+        'required' => false,
+        'force_activation' => false,
+    ],
+
+    [
+        'name' => 'Rearrange Woocommerce Products',
+        'slug' => 'rearrange-woocommerce-products',
+        'is_callable' => '',
+        'required' => false,
+        'force_activation' => false,
+    ],
+
+    [
+        'name' => 'Resize Image After Upload',
+        'slug' => 'resize-image-after-upload',
+        'is_callable' => '',
+        'required' => false,
+        'force_activation' => false,
+    ],
+
+    [
+        'name' => 'WP Fastest Cache',
+        'slug' => 'wp-fastest-cache',
+        'is_callable' => '',
+        'required' => false,
+        'force_activation' => false,
+    ],
+
+    [
         'name' => 'WP Mail SMTP by WPForms',
         'slug' => 'wp-mail-smtp',
+        'is_callable' => '',
+        'required' => false,
+        'force_activation' => false,
+    ],
+
+    [
+        'name' => 'WP Migrate DB',
+        'slug' => 'wp-migrate-db',
+        'is_callable' => '',
+        'required' => false,
+        'force_activation' => false,
+    ],
+
+    [
+        'name' => 'Yoast SEO',
+        'slug' => 'wordpress-seo',
         'is_callable' => '',
         'required' => false,
         'force_activation' => false,
@@ -97,20 +148,18 @@ $reboot_tgmpa_plugins = array(
     
 );
 
-$reboot_tgmpa_plugins = apply_filters('reboot_tgmpa_plugins', $reboot_tgmpa_plugins);
-
 if (!function_exists('reboot_tgmpa_plugins_filter')) {
     function reboot_tgmpa_plugins_filter($tgmpa_plugins)
     {
-        $file = 'tgmpa/config.php';
+        $file = REBOOT_DIRECTORY_NAME . '/tgmpa/config.php';
 
         $paths = [];
 
         if (REBOOT_IS_CHILD) {
-            $paths[] = REBOOT_CHILD_PATH . REBOOT_DIRECTORY_NAME . '/' . $file;
+            $paths[] = REBOOT_CHILD_PATH . $file;
         }
 
-        $paths[] = REBOOT_TEMPLATE_PATH . REBOOT_DIRECTORY_NAME . '/' . $file;
+        $paths[] = REBOOT_TEMPLATE_PATH . $file;
 
         foreach ($paths as $path) {
             if (!is_file($path)) {
@@ -129,6 +178,8 @@ if (!function_exists('reboot_tgmpa_plugins_filter')) {
 
     add_filter('reboot_tgmpa_plugins', 'reboot_tgmpa_plugins_filter', 10, 1);
 }
+
+$reboot_tgmpa_plugins = apply_filters('reboot_tgmpa_plugins', $reboot_tgmpa_plugins);
 
 if (!function_exists('reboot_plugin_action_links')) {
     function reboot_plugin_action_links($links, $file)

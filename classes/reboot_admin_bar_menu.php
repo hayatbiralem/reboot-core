@@ -15,7 +15,7 @@ if (!class_exists('reboot_admin_bar_menu')) {
             $replace = [
                 11 => [
                     'wp-logo' => [
-                        'title' => sprintf('<span class="dashicons-reboot-%s"></span><span class="screen-reader-text">%s</span>', REBOOT_AGENCY_ICON, REBOOT_AGENCY),
+                        'title' => sprintf('<span class="%s"></span><span class="screen-reader-text">%s</span>', REBOOT_AGENCY_MENU_ICON, REBOOT_AGENCY),
                         'href' => REBOOT_AGENCY_URL,
                         'meta' => [
                             'target' => '_blank'

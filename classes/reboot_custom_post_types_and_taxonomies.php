@@ -80,7 +80,7 @@ if (!class_exists('reboot_custom_post_types_and_taxonomies')) {
             $default_args = [
                 'menu_position' => 3,
                 'public' => true,
-                'menu_icon' => sprintf('dashicons-reboot-%s', REBOOT_AGENCY_SLUG), // 'dashicons-layout',
+                'menu_icon' => REBOOT_AGENCY_MENU_ICON, // 'dashicons-layout',
                 'supports' => ['title'],
 
                 'publicly_queryable' => false, // only admin

@@ -20,6 +20,12 @@ if (!defined('REBOOT_AGENCY_EMAIL')) {
     define('REBOOT_AGENCY_EMAIL', 'info@reboot.com.tr');
 }
 
+/*
+if (!defined('REBOOT_AGENCY_MENU_ICON')) {
+    define('REBOOT_AGENCY_MENU_ICON', 'dashicons-my-client-emblem');
+}
+*/
+
 
 /**
  * Client
