@@ -1,0 +1,24 @@
+.c-post-list__link {
+    display: block;
+    text-decoration: none;
+}
+
+.c-post-list__date,
+.c-post-list__title,
+.c-post-list__description {
+    display: block;
+}
+
+.c-post-list__title {
+    font-size: 125%;
+}
+
+.c-post-list__date,
+.c-post-list__description {
+    font-size: 75%;
+}
+
+.c-post-list__item {
+    margin-bottom: 15px;
+    line-height: 1.5;
+}
