@@ -19,7 +19,7 @@ return array(
             'heading' => __( 'Shortcode', REBOOT_TEXT_DOMAIN ),
             'param_name' => 'shortcode',
             'value' => __( '<p>You can use shortcodes here!</p>', REBOOT_TEXT_DOMAIN ),
-        )
+        ),
 
     ),
 );

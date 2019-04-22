@@ -19,34 +19,69 @@ if (!class_exists('reboot_front_end_scripts')) {
          */
         function front_end_scripts()
         {
-            // path => [deps]
-            $scripts = [];
+            /**
+             * Path Collections
+             */
 
-            // path => [deps]
+            $scripts = [];
             $styles = [];
 
-            // css
-            $styles = array_merge($styles, reboot_get_assets_by_folder('bothend/css'));
 
-            // fonts
-            $styles = array_merge($styles, reboot_get_assets_by_folder('bothend/font'));
+            /**
+             * Scripts
+             */
 
+            $bothend_scripts = reboot_get_file_paths_by_folder(REBOOT_ASSETS_PATH, REBOOT_ASSETS_URL, 'bothend/js', 'script.js');
+            $frontend_scripts = reboot_get_file_paths_by_folder(REBOOT_ASSETS_PATH, REBOOT_ASSETS_URL, 'frontend/js', 'script.js');
+
+            $child_bothend_scripts = reboot_get_file_paths_by_folder(REBOOT_CHILD_PATH, REBOOT_CHILD_URL, REBOOT_DIRECTORY_NAME . '/assets/bothend/js', 'script.js');
+            $child_frontend_scripts = reboot_get_file_paths_by_folder(REBOOT_CHILD_PATH, REBOOT_CHILD_URL, REBOOT_DIRECTORY_NAME . '/assets/frontend/js', 'script.js');
+
+
+            /**
+             * Styles
+             */
+
+            $bothend_styles = reboot_get_file_paths_by_folder(REBOOT_ASSETS_PATH, REBOOT_ASSETS_URL, 'bothend/css', 'style.css');
+            $frontend_styles = reboot_get_file_paths_by_folder(REBOOT_ASSETS_PATH, REBOOT_ASSETS_URL, 'frontend/css', 'style.css');
+
+            $bothend_fonts = reboot_get_file_paths_by_folder(REBOOT_ASSETS_PATH, REBOOT_ASSETS_URL, 'bothend/font', 'style.css');
+            $frontend_fonts = reboot_get_file_paths_by_folder(REBOOT_ASSETS_PATH, REBOOT_ASSETS_URL, 'frontend/font', 'style.css');
+
+            $child_bothend_styles = reboot_get_file_paths_by_folder(REBOOT_CHILD_PATH, REBOOT_CHILD_URL, REBOOT_DIRECTORY_NAME . '/assets/bothend/css', 'style.css');
+            $child_frontend_styles = reboot_get_file_paths_by_folder(REBOOT_CHILD_PATH, REBOOT_CHILD_URL, REBOOT_DIRECTORY_NAME . '/assets/frontend/css', 'style.css');
+
+            $child_bothend_fonts = reboot_get_file_paths_by_folder(REBOOT_CHILD_PATH, REBOOT_CHILD_URL, REBOOT_DIRECTORY_NAME . '/assets/bothend/font', 'style.css');
+            $child_frontend_fonts = reboot_get_file_paths_by_folder(REBOOT_CHILD_PATH, REBOOT_CHILD_URL, REBOOT_DIRECTORY_NAME . '/assets/frontend/font', 'style.css');
+
+
+            /**
+             * Merge
+             */
+
+            $scripts = array_merge($scripts, $bothend_scripts, $frontend_scripts, $child_bothend_scripts, $child_frontend_scripts);
+            $styles = array_merge($styles, $bothend_styles, $frontend_styles, $bothend_fonts, $frontend_fonts, $child_bothend_styles, $child_frontend_styles, $child_bothend_fonts, $child_frontend_fonts);
+
+            // reboot_dd($scripts);
+
+
+            /**
+             * Enqueue
+             */
 
             // Scripts
             if (!empty($scripts)) {
-                foreach ($scripts as $script => $deps) {
-                    if (file_exists(REBOOT_ASSETS_PATH . $script)) {
-                        wp_enqueue_script(REBOOT_AGENCY_SLUG . '-' . sanitize_title($script), REBOOT_ASSETS_URL . $script, $deps, reboot_get_assets_version(REBOOT_ASSETS_PATH . $script, false));
-                    }
+                foreach ($scripts as $file) {
+                    $deps = reboot_read_config($file['base_path'] . 'config.json', 'deps', []);
+                    wp_enqueue_script(REBOOT_AGENCY_SLUG . '-' . sanitize_title($file['relative_path']), $file['file_url'], $deps, reboot_get_assets_version($file['file_path'], false));
                 }
             }
 
             // Styles
             if (!empty($styles)) {
-                foreach ($styles as $style => $deps) {
-                    if (file_exists(REBOOT_ASSETS_PATH . $style)) {
-                        wp_enqueue_style('reboot-' . sanitize_title($style), REBOOT_ASSETS_URL . $style, $deps, reboot_get_assets_version(REBOOT_ASSETS_PATH . $style, false));
-                    }
+                foreach ($styles as $file) {
+                    $deps = reboot_read_config($file['base_path'] . 'config.json', 'deps', []);
+                    wp_enqueue_style(REBOOT_AGENCY_SLUG . '-' . sanitize_title($file['relative_path']), $file['file_url'], $deps, reboot_get_assets_version($file['file_path'], false));
                 }
             }
         }

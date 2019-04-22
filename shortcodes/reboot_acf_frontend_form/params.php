@@ -23,5 +23,14 @@ return array(
             'description' => __('Select ACF form.', REBOOT_TEXT_DOMAIN),
         ),
 
+        array(
+            "type" => "textfield",
+            "class" => "",
+            "heading" => __("Submit Value", REBOOT_TEXT_DOMAIN),
+            "param_name" => "submit_value",
+            "value" => "",
+            "std" => __("Update", REBOOT_TEXT_DOMAIN),
+        ),
+
     ),
 );
