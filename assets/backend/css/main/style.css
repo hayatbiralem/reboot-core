@@ -7,3 +7,8 @@
         vertical-align: top;
     }
 }
+
+
+[data-vc-shortcode-param-name="extra_el_classes"] label.vc_checkbox-label {
+    display: block;
+}

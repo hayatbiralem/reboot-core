@@ -18,17 +18,17 @@ if (!class_exists('reboot_vc_common_param_extra_el_classes')) {
                 'vc_section' => [
                     __('White text color') => 'u-text-white',
                     __('Has grayscale image hover') => 'has-grayscale-image-hover',
-                    __('Has parallax') => 'irm-parallax',
                 ],
                 'vc_row' => [
                     __('White text color') => 'u-text-white',
                     __('Has grayscale image hover') => 'has-grayscale-image-hover',
-                    __('Has parallax') => 'irm-parallax',
+                    __('Has two columns at mobile') => 'has-two-columns-at-mobile',
+                    __('Has one column under desktop') => 'has-one-column-under-desktop',
                 ],
                 'vc_row_inner' => [
                     __('White text color') => 'u-text-white',
                     __('Has grayscale image hover') => 'has-grayscale-image-hover',
-                    __('Has parallax') => 'irm-parallax',
+                    __('Has one column under desktop') => 'has-one-column-under-desktop',
                 ],
             ];
 
