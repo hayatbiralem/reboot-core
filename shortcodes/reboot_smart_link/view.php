@@ -20,6 +20,21 @@ if(!empty($link['href'])) {
     $link_attributes = ' ' . $link['attributes'];
 }
 
+
+$classes = ['c-reboot-smart-link'];
+
+if(isset($link_classes) && !empty($link_classes)) {
+    $classes[] = trim($link_classes);
+}
+
+if(isset($behavior) && !empty($behavior)) {
+    $classes[] = trim(implode(' ', explode(',', $behavior)));
+}
+
+$classes = implode(' ', $classes);
+
+
+
 ob_start();
 
 ?>
@@ -37,7 +52,7 @@ ob_start();
 $output = ob_get_clean();
 
 if(!empty($link_attributes)) {
-    printf('<a class="c-reboot-smart-link"%s>%s</a>', $link_attributes, $output);
+    printf('<a class="%s"%s>%s</a>', $classes, $link_attributes, $output);
 } else {
-    printf('<div class="c-reboot-smart-link">%s</div>', $output);
+    printf('<div class="%s">%s</div>', $classes, $output);
 }

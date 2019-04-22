@@ -67,7 +67,7 @@ a.c-reboot-smart-link {
     line-height: 1.3;
 }
 
-.c-reboot-smart-link__description p:last-child {
+.c-reboot-smart-link__description > *:last-child {
     margin-bottom: 0;
 }
 
@@ -92,4 +92,13 @@ a.c-reboot-smart-link {
 
 .u-position-relative {
     position: relative !important;
+}
+
+
+@media (max-width: 991px) {
+
+    .c-reboot-smart-link {
+        font-size: 12px;
+    }
+
 }

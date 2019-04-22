@@ -31,6 +31,12 @@ return array(
         ),
 
         array(
+            'type' => 'textfield',
+            'heading' => __( 'Link Classes', REBOOT_TEXT_DOMAIN ),
+            'param_name' => 'link_classes',
+        ),
+
+        array(
             "type" => "textfield",
             "class" => "",
             "heading" => __("Title", REBOOT_TEXT_DOMAIN),
