@@ -101,4 +101,21 @@ a.c-reboot-smart-link {
         font-size: 12px;
     }
 
+    .c-reboot-smart-link__title {
+        font-size: 16px;
+    }
+
+    .c-reboot-smart-link__content {
+        padding: 15px;
+    }
+
+}
+
+
+@media (max-width: 767px) {
+
+    .c-reboot-smart-link__description {
+        display: none !important;
+    }
+
 }

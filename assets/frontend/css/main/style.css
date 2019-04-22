@@ -1,5 +1,5 @@
 @media (max-width: 767px) {
-    .has-two-columns-at-mobile {
-        display: none !important;
+    .has-two-columns-at-mobile > .wpb_column {
+        width: 50% !important;
     }
 }
