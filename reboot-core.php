@@ -21,6 +21,9 @@ if(!class_exists('REBOOT_CORE')) {
     define('REBOOT_CORE_PATH', plugin_dir_path(__FILE__));
     define('REBOOT_CORE_URL', plugin_dir_url(__FILE__));
 
+    define('REBOOT_DATA_PATH', REBOOT_CORE_PATH . 'data/');
+    define('REBOOT_DATA_URL', REBOOT_CORE_URL . 'data/');
+
     define('REBOOT_ASSETS_VERSION', REBOOT_CORE_VERSION);
     define('REBOOT_ASSETS_PATH', REBOOT_CORE_PATH . 'assets/');
     define('REBOOT_ASSETS_URL', REBOOT_CORE_URL . 'assets/');
