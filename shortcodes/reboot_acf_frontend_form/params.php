@@ -32,5 +32,20 @@ return array(
             "std" => __("Update", REBOOT_TEXT_DOMAIN),
         ),
 
+        array(
+            'type' => 'dropdown',
+            'heading' => __('Success Page (Redirect)', REBOOT_TEXT_DOMAIN),
+            'value' => array_merge(
+                [
+                    __('Select...', REBOOT_TEXT_DOMAIN) => '',
+                ],
+                reboot_get_post_ids('page')
+            ),
+            'std' => '',
+            'admin_label' => true,
+            'param_name' => 'redirect',
+            'description' => __('Select page to redirect after success.', REBOOT_TEXT_DOMAIN),
+        ),
+
     ),
 );
