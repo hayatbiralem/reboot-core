@@ -28,6 +28,8 @@ if (!is_admin()) {
                 }
 
                 add_filter( "do_shortcode_tag", array($this, 'filter_output'), 20, 4 );
+
+                add_filter('the_content', [$this, 'filter_the_content'], 99, 1);
             }
 
             public function filter_atts($out, $pairs, $atts, $shortcode){
@@ -42,6 +44,10 @@ if (!is_admin()) {
                     return $output;
                 }
                 return reboot_replace_special_vars($output);
+            }
+
+            public function filter_the_content($content){
+                return reboot_replace_special_vars($content);
             }
 
         }
