@@ -59,10 +59,10 @@ if (!class_exists('reboot_vc_common_param_extra_el_classes')) {
 
                     array(
                         "type" => "checkbox",
-                        "heading" => __("Classes", REBOOT_TEXT_DOMAIN),
+                        "heading" => __("Classes", REBOOT_CORE_TEXT_DOMAIN),
                         "param_name" => "extra_el_classes",
                         "value" => $value,
-                        'group' => sprintf(__('%s Classes', REBOOT_TEXT_DOMAIN), REBOOT_AGENCY),
+                        'group' => sprintf(__('%s Classes', REBOOT_CORE_TEXT_DOMAIN), REBOOT_AGENCY),
                     ),
 
                 );

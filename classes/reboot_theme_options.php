@@ -26,8 +26,8 @@ if(!class_exists('reboot_theme_options')) {
 
         function add_sub_page(){
             acf_add_options_sub_page(array(
-                'page_title' 	=> __('Theme Options', REBOOT_TEXT_DOMAIN),
-                'menu_title'	=> __('Theme Options', REBOOT_TEXT_DOMAIN),
+                'page_title' 	=> __('Theme Options', REBOOT_CORE_TEXT_DOMAIN),
+                'menu_title'	=> __('Theme Options', REBOOT_CORE_TEXT_DOMAIN),
                 'menu_slug'	=> $this->menu_slug,
                 'parent_slug'	=> REBOOT_AGENCY_SLUG,
             ));

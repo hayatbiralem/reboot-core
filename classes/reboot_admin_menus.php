@@ -36,23 +36,23 @@ if (!class_exists('reboot_admin_menus')) {
             <div id="reboot-dashboard" class="<?= REBOOT_AGENCY_SLUG ?> wrap">
 
                 <div class="reboot-welcome">
-                    <h1><?= sprintf(__('Welcome to %s!', REBOOT_TEXT_DOMAIN), REBOOT_AGENCY) ?></h1>
-                    <p class="reboot-subtitle"><?= __('This menu is about collecting some important links together. <br>You could start installing recommended plugins.', REBOOT_TEXT_DOMAIN) ?></p>
+                    <h1><?= sprintf(__('Welcome to %s!', REBOOT_CORE_TEXT_DOMAIN), REBOOT_AGENCY) ?></h1>
+                    <p class="reboot-subtitle"><?= __('This menu is about collecting some important links together. <br>You could start installing recommended plugins.', REBOOT_CORE_TEXT_DOMAIN) ?></p>
                 </div>
 
                 <?php if(false) : ?>
                 <div class="reboot-postbox">
-                    <h2 class="reboot-with-subtitle"><?= __('Let’s get some work done!', REBOOT_TEXT_DOMAIN) ?></h2>
-                    <p class="reboot-subtitle"><?= __('We have assembled useful links to get you started:', REBOOT_TEXT_DOMAIN) ?></p>
+                    <h2 class="reboot-with-subtitle"><?= __('Let’s get some work done!', REBOOT_CORE_TEXT_DOMAIN) ?></h2>
+                    <p class="reboot-subtitle"><?= __('We have assembled useful links to get you started:', REBOOT_CORE_TEXT_DOMAIN) ?></p>
 
                     <div class="reboot-column-container">
 
                         <div class="reboot-column" style="width: 40%;">
-                            <h3><?= __('The 7', REBOOT_TEXT_DOMAIN) ?></h3>
+                            <h3><?= __('The 7', REBOOT_CORE_TEXT_DOMAIN) ?></h3>
                             <ul class="reboot-links">
                                 <li>
                                     <a target="_blank" href="<?= admin_url('admin.php?page=the7-plugins') ?>"
-                                       class="dashicons-before dashicons-admin-plugins"><?= sprintf(__('Install recommended %s plugins', REBOOT_TEXT_DOMAIN), 'The 7') ?></a>
+                                       class="dashicons-before dashicons-admin-plugins"><?= sprintf(__('Install recommended %s plugins', REBOOT_CORE_TEXT_DOMAIN), 'The 7') ?></a>
 
                                     <div class="reboot-notes">
                                         <ol>
@@ -72,7 +72,7 @@ if (!class_exists('reboot_admin_menus')) {
                             <ul class="reboot-links">
                                 <li>
                                     <a target="_blank" href="<?= admin_url(sprintf('admin.php?page=%s-install-plugins', REBOOT_AGENCY_SLUG)) ?>"
-                                       class="dashicons-before dashicons-admin-plugins"><?= sprintf(__('Install recommended %s plugins', REBOOT_TEXT_DOMAIN), REBOOT_AGENCY) ?></a>
+                                       class="dashicons-before dashicons-admin-plugins"><?= sprintf(__('Install recommended %s plugins', REBOOT_CORE_TEXT_DOMAIN), REBOOT_AGENCY) ?></a>
 
                                     <div class="reboot-notes">
                                         <ol>

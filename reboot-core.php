@@ -14,12 +14,14 @@ if (!defined('ABSPATH')) {
     exit('No direct script access allowed');
 }
 
-if(!class_exists('REBOOT_CORE')) {
+if (!class_exists('REBOOT_CORE')) {
 
     define('REBOOT_CORE_VERSION', '4.0.0');
 
     define('REBOOT_CORE_PATH', plugin_dir_path(__FILE__));
     define('REBOOT_CORE_URL', plugin_dir_url(__FILE__));
+
+    define('REBOOT_CORE_DIRECTORY_NAME', dirname(plugin_basename(__FILE__)));
 
     define('REBOOT_DATA_PATH', REBOOT_CORE_PATH . 'data/');
     define('REBOOT_DATA_URL', REBOOT_CORE_URL . 'data/');
@@ -28,8 +30,8 @@ if(!class_exists('REBOOT_CORE')) {
     define('REBOOT_ASSETS_PATH', REBOOT_CORE_PATH . 'assets/');
     define('REBOOT_ASSETS_URL', REBOOT_CORE_URL . 'assets/');
 
-    define('REBOOT_NONCE_KEY', '1c1d1bdd7e6c24057ef271c2bd5e3d6c' ); // You can use md5_file( __FILE__ ) for new cool nonce key ;)
-    define('REBOOT_TEXT_DOMAIN', 'reboot');
+    define('REBOOT_NONCE_KEY', '1c1d1bdd7e6c24057ef271c2bd5e3d6c'); // You can use md5_file( __FILE__ ) for new cool nonce key ;)
+    define('REBOOT_CORE_TEXT_DOMAIN', 'reboot-core');
     // REBOOT_CHILD_TEXT_DOMAIN will be defined in config
 
     define('REBOOT_TGMPA_PATH', REBOOT_CORE_PATH . 'tgmpa/');
@@ -54,8 +56,10 @@ if(!class_exists('REBOOT_CORE')) {
     require REBOOT_CORE_PATH . 'config.php';
     require REBOOT_CORE_PATH . 'bootstrap.php';
 
-    class REBOOT_CORE {
-        static function getVersion(){
+    class REBOOT_CORE
+    {
+        static function getVersion()
+        {
             return REBOOT_CORE_VERSION;
         }
     }

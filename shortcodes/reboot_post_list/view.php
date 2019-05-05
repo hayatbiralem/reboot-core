@@ -29,7 +29,7 @@ if (empty($items)) {
     } else {
         $singular_name = $post_type;
     }
-    return sprintf(__('No %s items found.', REBOOT_TEXT_DOMAIN), $singular_name);
+    return sprintf(__('No %s items found.', REBOOT_CORE_TEXT_DOMAIN), $singular_name);
 }
 
 ?>

@@ -30,8 +30,8 @@ if(!class_exists('reboot_custom_login')) {
 
         function add_sub_page(){
             acf_add_options_sub_page(array(
-                'page_title' 	=> __('Custom Login', REBOOT_TEXT_DOMAIN),
-                'menu_title'	=> __('Custom Login', REBOOT_TEXT_DOMAIN),
+                'page_title' 	=> __('Custom Login', REBOOT_CORE_TEXT_DOMAIN),
+                'menu_title'	=> __('Custom Login', REBOOT_CORE_TEXT_DOMAIN),
                 'menu_slug'	=> $this->menu_slug,
                 'parent_slug'	=> REBOOT_AGENCY_SLUG,
             ));

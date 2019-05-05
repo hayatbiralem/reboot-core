@@ -31,7 +31,7 @@ if (!function_exists('reboot_sharer_links')) {
                             <span class="fab fa-facebook"></span>
                         </span>
                             <span class="c-social-icons__text">
-                            <?= sprintf(__('Share on %s', REBOOT_TEXT_DOMAIN), 'Facebook') ?>
+                            <?= sprintf(__('Share on %s', REBOOT_CORE_TEXT_DOMAIN), 'Facebook') ?>
                         </span>
                         </a>
                     </li>
@@ -45,7 +45,7 @@ if (!function_exists('reboot_sharer_links')) {
                             <span class="fab fa-twitter"></span>
                         </span>
                             <span class="c-social-icons__text">
-                            <?= sprintf(__('Share on %s', REBOOT_TEXT_DOMAIN), 'Twitter') ?>
+                            <?= sprintf(__('Share on %s', REBOOT_CORE_TEXT_DOMAIN), 'Twitter') ?>
                         </span>
                         </a>
                     </li>
@@ -59,7 +59,7 @@ if (!function_exists('reboot_sharer_links')) {
                             <span class="fab fa-linkedin"></span>
                         </span>
                             <span class="c-social-icons__text">
-                            <?= sprintf(__('Share on %s', REBOOT_TEXT_DOMAIN), 'Linkedin') ?>
+                            <?= sprintf(__('Share on %s', REBOOT_CORE_TEXT_DOMAIN), 'Linkedin') ?>
                         </span>
                         </a>
                     </li>

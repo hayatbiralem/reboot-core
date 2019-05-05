@@ -13,7 +13,7 @@ if(!class_exists('reboot_dashboard_widgets')) {
         public function add_dashboard_widgets()
         {
             $widgets = array(
-                'useful_links' => __('Useful Links', REBOOT_TEXT_DOMAIN),
+                'useful_links' => __('Useful Links', REBOOT_CORE_TEXT_DOMAIN),
             );
 
             foreach ($widgets as $widget => $title) {
@@ -30,19 +30,19 @@ if(!class_exists('reboot_dashboard_widgets')) {
             $services = [
                 [
                     'title' => 'Bulk Resize Photos',
-                    'description' => __('Uses browser image resizing without uploading so blazing fast resizing with very large files', REBOOT_TEXT_DOMAIN),
+                    'description' => __('Uses browser image resizing without uploading so blazing fast resizing with very large files', REBOOT_CORE_TEXT_DOMAIN),
                     'link_text' => 'bulkresizephotos.com',
                     'link_href' => 'https://bulkresizephotos.com'
                 ],
                 [
                     'title' => 'Pixlr X',
-                    'description' => __('HTML5/Javascript based simple but very handy online image editing software', REBOOT_TEXT_DOMAIN),
+                    'description' => __('HTML5/Javascript based simple but very handy online image editing software', REBOOT_CORE_TEXT_DOMAIN),
                     'link_text' => 'pixlr.com/x',
                     'link_href' => 'https://pixlr.com/x'
                 ],
                 [
                     'title' => 'Pixlr Editor',
-                    'description' => __('Flash based Photoshop like online image editing software', REBOOT_TEXT_DOMAIN),
+                    'description' => __('Flash based Photoshop like online image editing software', REBOOT_CORE_TEXT_DOMAIN),
                     'link_text' => 'pixlr.com/editor',
                     'link_href' => 'https://pixlr.com/editor'
                 ],
@@ -53,8 +53,8 @@ if(!class_exists('reboot_dashboard_widgets')) {
                 <table class="widefat striped fixed_">
                     <thead>
                     <tr>
-                        <th><?= __('Service', REBOOT_TEXT_DOMAIN) ?></th>
-                        <th><?= __('Link', REBOOT_TEXT_DOMAIN) ?></th>
+                        <th><?= __('Service', REBOOT_CORE_TEXT_DOMAIN) ?></th>
+                        <th><?= __('Link', REBOOT_CORE_TEXT_DOMAIN) ?></th>
                     </tr>
                     </thead>
                     <tbody>

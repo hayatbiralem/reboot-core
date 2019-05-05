@@ -10,9 +10,9 @@ if(!class_exists('REBOOT_Widget_Blocks')) {
         public function __construct() {
             $widget_ops = array(
                 'classname' => 'reboot_widget_blocks',
-                'description' => __('Select and print block(s)', REBOOT_TEXT_DOMAIN),
+                'description' => __('Select and print block(s)', REBOOT_CORE_TEXT_DOMAIN),
             );
-            parent::__construct( 'reboot_widget_blocks', sprintf(__('%s Blocks(s)', REBOOT_TEXT_DOMAIN), REBOOT_AGENCY), $widget_ops );
+            parent::__construct( 'reboot_widget_blocks', sprintf(__('%s Blocks(s)', REBOOT_CORE_TEXT_DOMAIN), REBOOT_AGENCY), $widget_ops );
         }
 
         /**

@@ -62,7 +62,7 @@ if (!class_exists('reboot_vc_shortcodes')) {
         {
             $paths = [];
             $paths[REBOOT_CORE_PATH] = REBOOT_CORE_URL;
-            $paths[REBOOT_CHILD_PATH . REBOOT_DIRECTORY_NAME] = REBOOT_CHILD_URL . REBOOT_DIRECTORY_NAME;
+            $paths[REBOOT_CHILD_PATH . REBOOT_DIRECTORY_NAME . '/'] = REBOOT_CHILD_URL . REBOOT_DIRECTORY_NAME . '/';
             $paths = apply_filters('reboot_vc_shortcode_paths', $paths);
             return $paths;
         }

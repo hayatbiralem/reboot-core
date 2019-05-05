@@ -20,7 +20,7 @@ if(!class_exists('reboot_acf_hooks')) {
             }
 
             if($field['required'] && !filter_var($value, FILTER_VALIDATE_EMAIL)) {
-                $valid = sprintf( __('%s value is invalid', REBOOT_TEXT_DOMAIN), $field['label'] );
+                $valid = sprintf( __('%s value is invalid', REBOOT_CORE_TEXT_DOMAIN), $field['label'] );
                 // $valid = var_export($field, true);
             }
 

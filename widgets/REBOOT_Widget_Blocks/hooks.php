@@ -19,7 +19,7 @@ if (!class_exists('REBOOT_Widget_Blocks_Hooks')) {
                 'fields' => array(
                     array(
                         'key' => 'field_5bcf669514f5b',
-                        'label' => __('Blocks', REBOOT_TEXT_DOMAIN),
+                        'label' => __('Blocks', REBOOT_CORE_TEXT_DOMAIN),
                         'name' => 'blocks',
                         'type' => 'repeater',
                         'instructions' => '',
@@ -38,7 +38,7 @@ if (!class_exists('REBOOT_Widget_Blocks_Hooks')) {
                         'sub_fields' => array(
                             array(
                                 'key' => 'field_reboot_widget_blocks',
-                                'label' => __('Block', REBOOT_TEXT_DOMAIN),
+                                'label' => __('Block', REBOOT_CORE_TEXT_DOMAIN),
                                 'name' => 'id',
                                 'type' => 'post_object',
                                 'instructions' => '',

@@ -10,9 +10,9 @@ if(!class_exists('REBOOT_Widget_Post_List')) {
         public function __construct() {
             $widget_ops = array(
                 'classname' => 'reboot_widget_post_list',
-                'description' => __('Simple post list from any post type with optional taxonomy terms', REBOOT_TEXT_DOMAIN),
+                'description' => __('Simple post list from any post type with optional taxonomy terms', REBOOT_CORE_TEXT_DOMAIN),
             );
-            parent::__construct( 'reboot_widget_post_list', sprintf(__('%s Post List', REBOOT_TEXT_DOMAIN), REBOOT_AGENCY), $widget_ops );
+            parent::__construct( 'reboot_widget_post_list', sprintf(__('%s Post List', REBOOT_CORE_TEXT_DOMAIN), REBOOT_AGENCY), $widget_ops );
         }
 
         /**
@@ -50,7 +50,7 @@ if(!class_exists('REBOOT_Widget_Post_List')) {
             echo '<div class="c-widget__body">';
             // content
             if(empty($reboot_post_list) || empty(implode('', (array) $reboot_post_list))) {
-                echo __('You need to set the data settings of your widget!' , REBOOT_TEXT_DOMAIN);
+                echo __('You need to set the data settings of your widget!' , REBOOT_CORE_TEXT_DOMAIN);
                 return;
             } else {
                 echo do_shortcode( sprintf('[reboot_post_list post_type="%s" count="%s" taxonomy="%s" terms="%s"]', $reboot_post_list['post_type'], $reboot_post_list['count'], $reboot_post_list['taxonomy'], $reboot_post_list['terms']) );

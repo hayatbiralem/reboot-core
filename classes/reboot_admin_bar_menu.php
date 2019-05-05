@@ -23,7 +23,7 @@ if (!class_exists('reboot_admin_bar_menu')) {
                     ],
 
                     'about' => [
-                        'title' => sprintf(__('About %s', REBOOT_TEXT_DOMAIN), REBOOT_AGENCY),
+                        'title' => sprintf(__('About %s', REBOOT_CORE_TEXT_DOMAIN), REBOOT_AGENCY),
                         'href' => REBOOT_AGENCY_URL,
                         'meta' => [
                             'target' => '_blank'

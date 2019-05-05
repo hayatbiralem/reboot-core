@@ -14,7 +14,7 @@
 global $sitepress;
 
 if (!isset($action_content) || empty($action_content)) {
-    $action_content = __('Show', REBOOT_TEXT_DOMAIN);
+    $action_content = __('Show', REBOOT_CORE_TEXT_DOMAIN);
 } else {
     $action_content = do_shortcode(urldecode(base64_decode($action_content)));
 }
@@ -51,11 +51,11 @@ if (function_exists('wp_rml_get_attachments') && isset($folder)) {
         $table = '<table>';
         $body = '<tbody>';
 
-        $columns = [__('Title', REBOOT_TEXT_DOMAIN) => 'post_title'];
+        $columns = [__('Title', REBOOT_CORE_TEXT_DOMAIN) => 'post_title'];
         if (isset($add_description_column) && $add_description_column == 'true') {
-            $columns[__('Description', REBOOT_TEXT_DOMAIN)] = 'post_content';
+            $columns[__('Description', REBOOT_CORE_TEXT_DOMAIN)] = 'post_content';
         }
-        $columns[__('Action', REBOOT_TEXT_DOMAIN)] = 'attachment_url';
+        $columns[__('Action', REBOOT_CORE_TEXT_DOMAIN)] = 'attachment_url';
 
         $head = '<thead><tr>';
         foreach ($columns as $key => $column) {
@@ -122,6 +122,6 @@ if (function_exists('wp_rml_get_attachments') && isset($folder)) {
         $folder_object = wp_rml_get_object_by_id($folder);
         $folder_data = $folder_object->getRowData();
         // var_export($folder_data);
-        printf('<p style="text-align: center;">%s</p>', sprintf(__('File not found in "%s" folder!', REBOOT_TEXT_DOMAIN), $folder_data->name));
+        printf('<p style="text-align: center;">%s</p>', sprintf(__('File not found in "%s" folder!', REBOOT_CORE_TEXT_DOMAIN), $folder_data->name));
     }
 }

@@ -15,12 +15,12 @@ if (!function_exists('reboot_get_local_data')) {
     function reboot_get_local_data($key, $lang = 'en')
     {
         if (!$key) {
-            return sprintf(__('Key not found: %s', REBOOT_TEXT_DOMAIN), $key);
+            return sprintf(__('Key not found: %s', REBOOT_CORE_TEXT_DOMAIN), $key);
         }
 
         $file = REBOOT_DATA_PATH . $key . '/' . $lang . '.json';
         if (!file_exists($file)) {
-            return sprintf(__('File not found: %s', REBOOT_TEXT_DOMAIN), $file);
+            return sprintf(__('File not found: %s', REBOOT_CORE_TEXT_DOMAIN), $file);
         }
 
         $str = file_get_contents($file);

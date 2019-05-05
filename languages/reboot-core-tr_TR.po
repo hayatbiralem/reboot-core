@@ -1,0 +1,1081 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Reboot Core\n"
+"POT-Creation-Date: 2019-05-05 20:08+0300\n"
+"PO-Revision-Date: 2019-05-05 20:12+0300\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: tr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 2.2.1\n"
+"X-Poedit-Basepath: ..\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-Flags-xgettext: --add-comments=translators:\n"
+"X-Poedit-WPHeader: reboot-core.php\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;"
+"esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;_n_noop:1,2;"
+"_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPathExcluded-0: *.js\n"
+
+#: classes/reboot_acf_hooks.php:23
+#, php-format
+msgid "%s value is invalid"
+msgstr ""
+
+#: classes/reboot_admin_bar_menu.php:26
+#, php-format
+msgid "About %s"
+msgstr ""
+
+#: classes/reboot_admin_menus.php:39
+#, php-format
+msgid "Welcome to %s!"
+msgstr ""
+
+#: classes/reboot_admin_menus.php:40
+msgid ""
+"This menu is about collecting some important links together. <br>You could "
+"start installing recommended plugins."
+msgstr ""
+
+#: classes/reboot_admin_menus.php:45
+msgid "Let’s get some work done!"
+msgstr ""
+
+#: classes/reboot_admin_menus.php:46
+msgid "We have assembled useful links to get you started:"
+msgstr ""
+
+#: classes/reboot_admin_menus.php:51
+msgid "The 7"
+msgstr ""
+
+#: classes/reboot_admin_menus.php:55 classes/reboot_admin_menus.php:75
+#, php-format
+msgid "Install recommended %s plugins"
+msgstr "Önerilen %s eklentilerini yükle"
+
+#: classes/reboot_custom_login.php:33 classes/reboot_custom_login.php:34
+msgid "Custom Login"
+msgstr "Özel Giriş Ekranı"
+
+#: classes/reboot_custom_post_types_and_taxonomies.php:109
+#: shortcodes/reboot_acf_frontend_form/params.php:18
+#: shortcodes/reboot_template/params.php:18
+#: widgets/REBOOT_Widget_Blocks/hooks.php:41
+msgid "Block"
+msgstr "Blok"
+
+#: classes/reboot_custom_post_types_and_taxonomies.php:110
+#: widgets/REBOOT_Widget_Blocks/hooks.php:22
+msgid "Blocks"
+msgstr "Bloklar"
+
+#: classes/reboot_custom_post_types_and_taxonomies.php:190
+#: classes/reboot_custom_post_types_and_taxonomies.php:192
+#: classes/reboot_custom_post_types_and_taxonomies.php:234
+#, php-format
+msgid "Add New %s"
+msgstr "Yeni %s Ekle"
+
+#: classes/reboot_custom_post_types_and_taxonomies.php:191
+#: classes/reboot_custom_post_types_and_taxonomies.php:231
+#, php-format
+msgid "Edit %s"
+msgstr "%s Girdisini Düzenle"
+
+#: classes/reboot_custom_post_types_and_taxonomies.php:193
+#: classes/reboot_custom_post_types_and_taxonomies.php:194
+#: classes/reboot_custom_post_types_and_taxonomies.php:232
+#, php-format
+msgid "View %s"
+msgstr "%s Girdisini Göster"
+
+#: classes/reboot_custom_post_types_and_taxonomies.php:195
+#: classes/reboot_custom_post_types_and_taxonomies.php:238
+#, php-format
+msgid "Search %s"
+msgstr "%s Girdilerinde Ara"
+
+#: classes/reboot_custom_post_types_and_taxonomies.php:196
+#, php-format
+msgid "No %s found"
+msgstr "%s bulunamadı"
+
+#: classes/reboot_custom_post_types_and_taxonomies.php:197
+#, php-format
+msgid "No %s found in Trash"
+msgstr "Çöpte %s bulunamadı"
+
+#: classes/reboot_custom_post_types_and_taxonomies.php:198
+#: classes/reboot_custom_post_types_and_taxonomies.php:237
+#, php-format
+msgid "Parent %s:"
+msgstr "Üst %s:"
+
+#: classes/reboot_custom_post_types_and_taxonomies.php:203
+#, php-format
+msgid "%s Archives"
+msgstr ""
+
+#: classes/reboot_custom_post_types_and_taxonomies.php:204
+#, php-format
+msgid "%s Attributes"
+msgstr ""
+
+#: classes/reboot_custom_post_types_and_taxonomies.php:205
+#, php-format
+msgid "Insert into %s"
+msgstr ""
+
+#: classes/reboot_custom_post_types_and_taxonomies.php:206
+#, php-format
+msgid "Uploaded to this %s"
+msgstr ""
+
+#: classes/reboot_custom_post_types_and_taxonomies.php:212
+#, php-format
+msgid "Filter %s list"
+msgstr ""
+
+#: classes/reboot_custom_post_types_and_taxonomies.php:213
+#, php-format
+msgid "%s list navigation"
+msgstr ""
+
+#: classes/reboot_custom_post_types_and_taxonomies.php:214
+#, php-format
+msgid "%s list"
+msgstr ""
+
+#: classes/reboot_custom_post_types_and_taxonomies.php:216
+#, php-format
+msgid "%s published."
+msgstr ""
+
+#: classes/reboot_custom_post_types_and_taxonomies.php:217
+#, php-format
+msgid "%s published privately."
+msgstr ""
+
+#: classes/reboot_custom_post_types_and_taxonomies.php:218
+#, php-format
+msgid "%s reverted to draft."
+msgstr ""
+
+#: classes/reboot_custom_post_types_and_taxonomies.php:219
+#, php-format
+msgid "%s scheduled."
+msgstr ""
+
+#: classes/reboot_custom_post_types_and_taxonomies.php:220
+#, php-format
+msgid "%s updated."
+msgstr ""
+
+#: classes/reboot_custom_post_types_and_taxonomies.php:230
+#, php-format
+msgid "All %s"
+msgstr "Tüm %s"
+
+#: classes/reboot_custom_post_types_and_taxonomies.php:233
+#, php-format
+msgid "Update %s"
+msgstr "%s Girdisini Güncelle"
+
+#: classes/reboot_custom_post_types_and_taxonomies.php:235
+#, php-format
+msgid "New %s Name"
+msgstr "Yeni %s İsmi"
+
+#: classes/reboot_custom_post_types_and_taxonomies.php:236
+#, php-format
+msgid "Parent %s"
+msgstr "Üst %s"
+
+#: classes/reboot_custom_post_types_and_taxonomies.php:239
+#, php-format
+msgid "Popular %s"
+msgstr "Popüler %s"
+
+#: classes/reboot_custom_post_types_and_taxonomies.php:240
+#, php-format
+msgid "Separate %s with commas"
+msgstr "%s girdilerini virgülle ayır"
+
+#: classes/reboot_custom_post_types_and_taxonomies.php:241
+#, php-format
+msgid "Add or remove %s"
+msgstr "%s ekle ya da kaldır"
+
+#: classes/reboot_custom_post_types_and_taxonomies.php:242
+#, php-format
+msgid "Choose from the most used %s"
+msgstr "Sık kullanılan %s girdilerinden seç"
+
+#: classes/reboot_custom_post_types_and_taxonomies.php:243
+#, php-format
+msgid "No %s found."
+msgstr "%s bulunamadı."
+
+#: classes/reboot_custom_post_types_and_taxonomies.php:244
+#, php-format
+msgid "← Back to %s"
+msgstr "← %s girdisine geri dön"
+
+#: classes/reboot_dashboard_widgets.php:16
+msgid "Useful Links"
+msgstr "Faydalı bağlantılar"
+
+#: classes/reboot_dashboard_widgets.php:33
+msgid ""
+"Uses browser image resizing without uploading so blazing fast resizing with "
+"very large files"
+msgstr ""
+
+#: classes/reboot_dashboard_widgets.php:39
+msgid ""
+"HTML5/Javascript based simple but very handy online image editing software"
+msgstr ""
+
+#: classes/reboot_dashboard_widgets.php:45
+msgid "Flash based Photoshop like online image editing software"
+msgstr ""
+
+#: classes/reboot_dashboard_widgets.php:56
+msgid "Service"
+msgstr "Servis"
+
+#: classes/reboot_dashboard_widgets.php:57
+#: shortcodes/reboot_smart_link/params.php:29
+msgid "Link"
+msgstr "Bağlantı"
+
+#: classes/reboot_theme_options.php:29 classes/reboot_theme_options.php:30
+msgid "Theme Options"
+msgstr "Tema Seçenekleri"
+
+#: classes/reboot_vc_common_param_condition.php:36
+#: shortcodes/reboot_template/params.php:29
+msgid "Condition"
+msgstr "Koşul"
+
+#: classes/reboot_vc_common_param_condition.php:39
+#: shortcodes/reboot_template/params.php:32
+msgid ""
+"You can set some condition here like <code>{call:function_name}</code> or "
+"<code>{call:class_name->method_name}</code>. <br>You can send params like "
+"<code>{call:function_name(Param 1, Param 2)}</code>"
+msgstr ""
+
+#: classes/reboot_vc_common_param_condition.php:40
+#: shortcodes/reboot_template/params.php:33
+#, php-format
+msgid "%s Condition"
+msgstr ""
+
+#: classes/reboot_vc_common_param_extra_el_classes.php:19
+#: classes/reboot_vc_common_param_extra_el_classes.php:23
+#: classes/reboot_vc_common_param_extra_el_classes.php:29
+msgid "White text color"
+msgstr ""
+
+#: classes/reboot_vc_common_param_extra_el_classes.php:20
+#: classes/reboot_vc_common_param_extra_el_classes.php:24
+#: classes/reboot_vc_common_param_extra_el_classes.php:30
+msgid "Has grayscale image hover"
+msgstr ""
+
+#: classes/reboot_vc_common_param_extra_el_classes.php:25
+msgid "Has two columns at mobile"
+msgstr ""
+
+#: classes/reboot_vc_common_param_extra_el_classes.php:26
+#: classes/reboot_vc_common_param_extra_el_classes.php:31
+msgid "Has one column under desktop"
+msgstr ""
+
+#: classes/reboot_vc_common_param_extra_el_classes.php:62
+msgid "Classes"
+msgstr ""
+
+#: classes/reboot_vc_common_param_extra_el_classes.php:65
+#, php-format
+msgid "%s Classes"
+msgstr ""
+
+#: functions/reboot_get_local_data.php:18
+#, php-format
+msgid "Key not found: %s"
+msgstr ""
+
+#: functions/reboot_get_local_data.php:23
+#, php-format
+msgid "File not found: %s"
+msgstr ""
+
+#: functions/reboot_minutes_to_hours.php:13
+#, php-format
+msgid "%s min"
+msgstr ""
+
+#: functions/reboot_minutes_to_hours.php:19
+#, php-format
+msgid "%d hr"
+msgid_plural "%d hrs"
+msgstr[0] ""
+msgstr[1] ""
+
+#: functions/reboot_minutes_to_hours.php:20
+#, php-format
+msgid "%d min"
+msgid_plural "%d mins"
+msgstr[0] ""
+msgstr[1] ""
+
+#: functions/reboot_sharer_links.php:34 functions/reboot_sharer_links.php:48
+#: functions/reboot_sharer_links.php:62
+#, php-format
+msgid "Share on %s"
+msgstr ""
+
+#: shortcodes/_shared/file-not-exists.php:1
+#, php-format
+msgid "File not exists: %s"
+msgstr ""
+
+#: shortcodes/reboot_acf_frontend_form/params.php:4
+#, php-format
+msgid "%s ACF Front End Form"
+msgstr ""
+
+#: shortcodes/reboot_acf_frontend_form/params.php:5
+msgid "Prints an ACF form for front-end"
+msgstr ""
+
+#: shortcodes/reboot_acf_frontend_form/params.php:9
+#: shortcodes/reboot_post_list/params.php:9
+#: shortcodes/reboot_print_media/params.php:23
+#: shortcodes/reboot_shortcode/params.php:9
+#: shortcodes/reboot_smart_link/params.php:9
+#: shortcodes/reboot_social_sharer/params.php:9
+#: shortcodes/reboot_template/params.php:9 shortcodes/reboot_year/params.php:9
+#, php-format
+msgid "%s Elements"
+msgstr ""
+
+#: shortcodes/reboot_acf_frontend_form/params.php:23
+msgid "Select ACF form."
+msgstr ""
+
+#: shortcodes/reboot_acf_frontend_form/params.php:29
+msgid "Submit Value"
+msgstr ""
+
+#: shortcodes/reboot_acf_frontend_form/params.php:32
+#: shortcodes/reboot_acf_frontend_form/view.php:12
+#: tgmpa/class-tgm-plugin-activation.php:2816
+msgid "Update"
+msgstr ""
+
+#: shortcodes/reboot_acf_frontend_form/params.php:37
+msgid "Success Page (Redirect)"
+msgstr ""
+
+#: shortcodes/reboot_acf_frontend_form/params.php:40
+msgid "Select..."
+msgstr ""
+
+#: shortcodes/reboot_acf_frontend_form/params.php:47
+msgid "Select page to redirect after success."
+msgstr ""
+
+#: shortcodes/reboot_post_list/params.php:4
+#: widgets/REBOOT_Widget_Post_List/widget.php:15
+#, php-format
+msgid "%s Post List"
+msgstr ""
+
+#: shortcodes/reboot_post_list/params.php:5
+#: widgets/REBOOT_Widget_Post_List/widget.php:13
+msgid "Simple post list from any post type with optional taxonomy terms"
+msgstr ""
+
+#: shortcodes/reboot_post_list/params.php:19
+msgid "Post Type"
+msgstr ""
+
+#: shortcodes/reboot_post_list/params.php:27
+msgid "Count"
+msgstr ""
+
+#: shortcodes/reboot_post_list/params.php:35
+msgid "Taxonomy"
+msgstr ""
+
+#: shortcodes/reboot_post_list/params.php:43
+msgid "Terms"
+msgstr ""
+
+#: shortcodes/reboot_post_list/view.php:32
+#, php-format
+msgid "No %s items found."
+msgstr ""
+
+#: shortcodes/reboot_print_media/params.php:13
+msgid "No folder found"
+msgstr ""
+
+#: shortcodes/reboot_print_media/params.php:18
+#, php-format
+msgid "%s Media List"
+msgstr ""
+
+#: shortcodes/reboot_print_media/params.php:19
+msgid "Prints media list with given folder"
+msgstr ""
+
+#: shortcodes/reboot_print_media/params.php:44
+msgid "Folder"
+msgstr ""
+
+#: shortcodes/reboot_print_media/params.php:49
+msgid "Select folder."
+msgstr ""
+
+#: shortcodes/reboot_print_media/params.php:54
+msgid "Add description column?"
+msgstr ""
+
+#: shortcodes/reboot_print_media/params.php:56
+#: shortcodes/reboot_print_media/params.php:65
+msgid "Additional Settings"
+msgstr ""
+
+#: shortcodes/reboot_print_media/params.php:62
+msgid "Action Content"
+msgstr ""
+
+#: shortcodes/reboot_print_media/params.php:64
+#, php-format
+msgid ""
+"<p>You can use shortcodes and/or html here! Leave empty to use default: \"%s"
+"\"</p>"
+msgstr ""
+
+#: shortcodes/reboot_print_media/params.php:64
+#: shortcodes/reboot_print_media/view.php:17
+msgid "Show"
+msgstr ""
+
+#: shortcodes/reboot_print_media/view.php:54
+#: shortcodes/reboot_smart_link/params.php:42
+msgid "Title"
+msgstr ""
+
+#: shortcodes/reboot_print_media/view.php:56
+#: shortcodes/reboot_smart_link/params.php:51
+msgid "Description"
+msgstr ""
+
+#: shortcodes/reboot_print_media/view.php:58
+msgid "Action"
+msgstr ""
+
+#: shortcodes/reboot_print_media/view.php:125
+#, php-format
+msgid "File not found in \"%s\" folder!"
+msgstr ""
+
+#: shortcodes/reboot_shortcode/params.php:4
+#, php-format
+msgid "%s Shortcode"
+msgstr ""
+
+#: shortcodes/reboot_shortcode/params.php:5
+msgid "Prints shortcode output without extra wrapper, etc."
+msgstr ""
+
+#: shortcodes/reboot_shortcode/params.php:19
+msgid "Shortcode"
+msgstr ""
+
+#: shortcodes/reboot_shortcode/params.php:21
+msgid "<p>You can use shortcodes here!</p>"
+msgstr ""
+
+#: shortcodes/reboot_smart_link/params.php:4
+#, php-format
+msgid "%s Smart Link"
+msgstr ""
+
+#: shortcodes/reboot_smart_link/params.php:5
+msgid "Prints a link to wrap/overlay its parent"
+msgstr ""
+
+#: shortcodes/reboot_smart_link/params.php:18
+msgid "Style"
+msgstr ""
+
+#: shortcodes/reboot_smart_link/params.php:20
+msgid "Default"
+msgstr ""
+
+#: shortcodes/reboot_smart_link/params.php:35
+msgid "Link Classes"
+msgstr ""
+
+#: shortcodes/reboot_smart_link/params.php:53
+msgid "<p>You can use html and/or shortcodes here!</p>"
+msgstr ""
+
+#: shortcodes/reboot_social_sharer/params.php:4
+#, php-format
+msgid "%s Social Sharer"
+msgstr ""
+
+#: shortcodes/reboot_social_sharer/params.php:5
+msgid "Prints social sharer links"
+msgstr ""
+
+#: shortcodes/reboot_social_sharer/params.php:18
+msgid "Platforms?"
+msgstr ""
+
+#: shortcodes/reboot_social_sharer/params.php:21
+msgid "Facebook"
+msgstr ""
+
+#: shortcodes/reboot_social_sharer/params.php:22
+msgid "Twitter"
+msgstr ""
+
+#: shortcodes/reboot_social_sharer/params.php:23
+msgid "Linkedin"
+msgstr ""
+
+#: shortcodes/reboot_template/params.php:4
+#, php-format
+msgid "%s Template"
+msgstr ""
+
+#: shortcodes/reboot_template/params.php:5
+msgid "Prints custom block template"
+msgstr ""
+
+#: shortcodes/reboot_template/params.php:23
+msgid "Select block."
+msgstr ""
+
+#: shortcodes/reboot_year/params.php:4
+#, php-format
+msgid "%s Year"
+msgstr ""
+
+#: shortcodes/reboot_year/params.php:5
+msgid "Prints current year"
+msgstr ""
+
+#: shortcodes/reboot_year/params.php:17
+msgid "Format"
+msgstr ""
+
+#: shortcodes/reboot_year/params.php:20
+msgid ""
+"More info: <a href='https://codex.wordpress.org/Formatting_Date_and_Time' "
+"target='_blank'>Formatting Date and Time</a>"
+msgstr ""
+
+#: tgmpa/class-tgm-plugin-activation.php:334
+msgid "Install Required Plugins"
+msgstr ""
+
+#: tgmpa/class-tgm-plugin-activation.php:335 tgmpa/config.php:288
+msgid "Install Plugins"
+msgstr ""
+
+#. translators: %s: plugin name.
+#: tgmpa/class-tgm-plugin-activation.php:337
+#, php-format
+msgid "Installing Plugin: %s"
+msgstr ""
+
+#. translators: %s: plugin name.
+#: tgmpa/class-tgm-plugin-activation.php:339
+#, php-format
+msgid "Updating Plugin: %s"
+msgstr ""
+
+#: tgmpa/class-tgm-plugin-activation.php:340
+msgid "Something went wrong with the plugin API."
+msgstr ""
+
+#. translators: 1: plugin name(s).
+#: tgmpa/class-tgm-plugin-activation.php:343
+#, php-format
+msgid "This theme requires the following plugin: %1$s."
+msgid_plural "This theme requires the following plugins: %1$s."
+msgstr[0] ""
+msgstr[1] ""
+
+#. translators: 1: plugin name(s).
+#: tgmpa/class-tgm-plugin-activation.php:349
+#, php-format
+msgid "This theme recommends the following plugin: %1$s."
+msgid_plural "This theme recommends the following plugins: %1$s."
+msgstr[0] ""
+msgstr[1] ""
+
+#. translators: 1: plugin name(s).
+#: tgmpa/class-tgm-plugin-activation.php:355
+#, php-format
+msgid ""
+"The following plugin needs to be updated to its latest version to ensure "
+"maximum compatibility with this theme: %1$s."
+msgid_plural ""
+"The following plugins need to be updated to their latest version to ensure "
+"maximum compatibility with this theme: %1$s."
+msgstr[0] ""
+msgstr[1] ""
+
+#. translators: 1: plugin name(s).
+#: tgmpa/class-tgm-plugin-activation.php:361
+#, php-format
+msgid "There is an update available for: %1$s."
+msgid_plural "There are updates available for the following plugins: %1$s."
+msgstr[0] ""
+msgstr[1] ""
+
+#. translators: 1: plugin name(s).
+#: tgmpa/class-tgm-plugin-activation.php:367
+#, php-format
+msgid "The following required plugin is currently inactive: %1$s."
+msgid_plural "The following required plugins are currently inactive: %1$s."
+msgstr[0] ""
+msgstr[1] ""
+
+#. translators: 1: plugin name(s).
+#: tgmpa/class-tgm-plugin-activation.php:373
+#, php-format
+msgid "The following recommended plugin is currently inactive: %1$s."
+msgid_plural "The following recommended plugins are currently inactive: %1$s."
+msgstr[0] ""
+msgstr[1] ""
+
+#: tgmpa/class-tgm-plugin-activation.php:378
+msgid "Begin installing plugin"
+msgid_plural "Begin installing plugins"
+msgstr[0] ""
+msgstr[1] ""
+
+#: tgmpa/class-tgm-plugin-activation.php:383
+msgid "Begin updating plugin"
+msgid_plural "Begin updating plugins"
+msgstr[0] ""
+msgstr[1] ""
+
+#: tgmpa/class-tgm-plugin-activation.php:388
+msgid "Begin activating plugin"
+msgid_plural "Begin activating plugins"
+msgstr[0] ""
+msgstr[1] ""
+
+#: tgmpa/class-tgm-plugin-activation.php:392
+msgid "Return to Required Plugins Installer"
+msgstr ""
+
+#: tgmpa/class-tgm-plugin-activation.php:393
+#: tgmpa/class-tgm-plugin-activation.php:920
+#: tgmpa/class-tgm-plugin-activation.php:2626
+#: tgmpa/class-tgm-plugin-activation.php:3679
+msgid "Return to the Dashboard"
+msgstr ""
+
+#: tgmpa/class-tgm-plugin-activation.php:394
+#: tgmpa/class-tgm-plugin-activation.php:3252
+msgid "Plugin activated successfully."
+msgstr ""
+
+#: tgmpa/class-tgm-plugin-activation.php:395
+#: tgmpa/class-tgm-plugin-activation.php:3045
+msgid "The following plugin was activated successfully:"
+msgid_plural "The following plugins were activated successfully:"
+msgstr[0] ""
+msgstr[1] ""
+
+#. translators: 1: plugin name.
+#: tgmpa/class-tgm-plugin-activation.php:397
+#, php-format
+msgid "No action taken. Plugin %1$s was already active."
+msgstr ""
+
+#. translators: 1: plugin name.
+#: tgmpa/class-tgm-plugin-activation.php:399
+#, php-format
+msgid ""
+"Plugin not activated. A higher version of %s is needed for this theme. "
+"Please update the plugin."
+msgstr ""
+
+#. translators: 1: dashboard link.
+#: tgmpa/class-tgm-plugin-activation.php:401
+#, php-format
+msgid "All plugins installed and activated successfully. %1$s"
+msgstr ""
+
+#: tgmpa/class-tgm-plugin-activation.php:402
+msgid "Dismiss this notice"
+msgstr ""
+
+#: tgmpa/class-tgm-plugin-activation.php:403
+msgid ""
+"There are one or more required or recommended plugins to install, update or "
+"activate."
+msgstr ""
+
+#: tgmpa/class-tgm-plugin-activation.php:404
+msgid "Please contact the administrator of this site for help."
+msgstr ""
+
+#: tgmpa/class-tgm-plugin-activation.php:607
+msgid "This plugin needs to be updated to be compatible with your theme."
+msgstr ""
+
+#: tgmpa/class-tgm-plugin-activation.php:608
+msgid "Update Required"
+msgstr ""
+
+#: tgmpa/class-tgm-plugin-activation.php:725
+msgid "Set the parent_slug config variable instead."
+msgstr ""
+
+#: tgmpa/class-tgm-plugin-activation.php:1027
+msgid ""
+"The remote plugin package does not contain a folder with the desired slug "
+"and renaming did not work."
+msgstr ""
+
+#: tgmpa/class-tgm-plugin-activation.php:1027
+#: tgmpa/class-tgm-plugin-activation.php:1030
+msgid ""
+"Please contact the plugin provider and ask them to package their plugin "
+"according to the WordPress guidelines."
+msgstr ""
+
+#: tgmpa/class-tgm-plugin-activation.php:1030
+msgid ""
+"The remote plugin package consists of more than one file, but the files are "
+"not packaged in a folder."
+msgstr ""
+
+#: tgmpa/class-tgm-plugin-activation.php:1214
+#: tgmpa/class-tgm-plugin-activation.php:3041
+msgctxt "plugin A *and* plugin B"
+msgid "and"
+msgstr ""
+
+#. translators: %s: version number
+#: tgmpa/class-tgm-plugin-activation.php:2075
+#, php-format
+msgid "TGMPA v%s"
+msgstr ""
+
+#: tgmpa/class-tgm-plugin-activation.php:2366
+msgid "Required"
+msgstr ""
+
+#: tgmpa/class-tgm-plugin-activation.php:2369
+msgid "Recommended"
+msgstr ""
+
+#: tgmpa/class-tgm-plugin-activation.php:2385
+msgid "WordPress Repository"
+msgstr ""
+
+#: tgmpa/class-tgm-plugin-activation.php:2388
+msgid "External Source"
+msgstr ""
+
+#: tgmpa/class-tgm-plugin-activation.php:2391
+msgid "Pre-Packaged"
+msgstr ""
+
+#: tgmpa/class-tgm-plugin-activation.php:2408
+msgid "Not Installed"
+msgstr ""
+
+#: tgmpa/class-tgm-plugin-activation.php:2412
+msgid "Installed But Not Activated"
+msgstr ""
+
+#: tgmpa/class-tgm-plugin-activation.php:2414
+msgid "Active"
+msgstr ""
+
+#: tgmpa/class-tgm-plugin-activation.php:2420
+msgid "Required Update not Available"
+msgstr ""
+
+#: tgmpa/class-tgm-plugin-activation.php:2423
+msgid "Requires Update"
+msgstr ""
+
+#: tgmpa/class-tgm-plugin-activation.php:2426
+msgid "Update recommended"
+msgstr ""
+
+#. translators: 1: install status, 2: update status
+#: tgmpa/class-tgm-plugin-activation.php:2435
+#, php-format
+msgctxt "Install/Update Status"
+msgid "%1$s, %2$s"
+msgstr ""
+
+#. translators: 1: number of plugins.
+#: tgmpa/class-tgm-plugin-activation.php:2481
+#, php-format
+msgctxt "plugins"
+msgid "All <span class=\"count\">(%s)</span>"
+msgid_plural "All <span class=\"count\">(%s)</span>"
+msgstr[0] ""
+msgstr[1] ""
+
+#. translators: 1: number of plugins.
+#: tgmpa/class-tgm-plugin-activation.php:2485
+#, php-format
+msgid "To Install <span class=\"count\">(%s)</span>"
+msgid_plural "To Install <span class=\"count\">(%s)</span>"
+msgstr[0] ""
+msgstr[1] ""
+
+#. translators: 1: number of plugins.
+#: tgmpa/class-tgm-plugin-activation.php:2489
+#, php-format
+msgid "Update Available <span class=\"count\">(%s)</span>"
+msgid_plural "Update Available <span class=\"count\">(%s)</span>"
+msgstr[0] ""
+msgstr[1] ""
+
+#. translators: 1: number of plugins.
+#: tgmpa/class-tgm-plugin-activation.php:2493
+#, php-format
+msgid "To Activate <span class=\"count\">(%s)</span>"
+msgid_plural "To Activate <span class=\"count\">(%s)</span>"
+msgstr[0] ""
+msgstr[1] ""
+
+#: tgmpa/class-tgm-plugin-activation.php:2575
+msgctxt "as in: \"version nr unknown\""
+msgid "unknown"
+msgstr ""
+
+#: tgmpa/class-tgm-plugin-activation.php:2583
+msgid "Installed version:"
+msgstr ""
+
+#: tgmpa/class-tgm-plugin-activation.php:2591
+msgid "Minimum required version:"
+msgstr ""
+
+#: tgmpa/class-tgm-plugin-activation.php:2603
+msgid "Available version:"
+msgstr ""
+
+#: tgmpa/class-tgm-plugin-activation.php:2626
+msgid "No plugins to install, update or activate."
+msgstr ""
+
+#: tgmpa/class-tgm-plugin-activation.php:2640
+msgid "Plugin"
+msgstr ""
+
+#: tgmpa/class-tgm-plugin-activation.php:2641
+msgid "Source"
+msgstr ""
+
+#: tgmpa/class-tgm-plugin-activation.php:2642
+msgid "Type"
+msgstr ""
+
+#: tgmpa/class-tgm-plugin-activation.php:2646
+msgid "Version"
+msgstr ""
+
+#: tgmpa/class-tgm-plugin-activation.php:2647
+msgid "Status"
+msgstr ""
+
+#. translators: %2$s: plugin name in screen reader markup
+#: tgmpa/class-tgm-plugin-activation.php:2696
+#, php-format
+msgid "Install %2$s"
+msgstr ""
+
+#. translators: %2$s: plugin name in screen reader markup
+#: tgmpa/class-tgm-plugin-activation.php:2701
+#, php-format
+msgid "Update %2$s"
+msgstr ""
+
+#. translators: %2$s: plugin name in screen reader markup
+#: tgmpa/class-tgm-plugin-activation.php:2707
+#, php-format
+msgid "Activate %2$s"
+msgstr ""
+
+#: tgmpa/class-tgm-plugin-activation.php:2777
+msgid "Upgrade message from the plugin author:"
+msgstr ""
+
+#: tgmpa/class-tgm-plugin-activation.php:2810
+msgid "Install"
+msgstr ""
+
+#: tgmpa/class-tgm-plugin-activation.php:2819
+msgid "Activate"
+msgstr ""
+
+#: tgmpa/class-tgm-plugin-activation.php:2850
+msgid "No plugins were selected to be installed. No action taken."
+msgstr ""
+
+#: tgmpa/class-tgm-plugin-activation.php:2852
+msgid "No plugins were selected to be updated. No action taken."
+msgstr ""
+
+#: tgmpa/class-tgm-plugin-activation.php:2893
+msgid "No plugins are available to be installed at this time."
+msgstr ""
+
+#: tgmpa/class-tgm-plugin-activation.php:2895
+msgid "No plugins are available to be updated at this time."
+msgstr ""
+
+#: tgmpa/class-tgm-plugin-activation.php:3001
+msgid "No plugins were selected to be activated. No action taken."
+msgstr ""
+
+#: tgmpa/class-tgm-plugin-activation.php:3027
+msgid "No plugins are available to be activated at this time."
+msgstr ""
+
+#: tgmpa/class-tgm-plugin-activation.php:3251
+msgid "Plugin activation failed."
+msgstr ""
+
+#. translators: 1: plugin name, 2: action number 3: total number of actions.
+#: tgmpa/class-tgm-plugin-activation.php:3591
+#, php-format
+msgid "Updating Plugin %1$s (%2$d/%3$d)"
+msgstr ""
+
+#. translators: 1: plugin name, 2: error message.
+#: tgmpa/class-tgm-plugin-activation.php:3594
+#, php-format
+msgid "An error occurred while installing %1$s: <strong>%2$s</strong>."
+msgstr ""
+
+#. translators: 1: plugin name.
+#: tgmpa/class-tgm-plugin-activation.php:3596
+#, php-format
+msgid "The installation of %1$s failed."
+msgstr ""
+
+#: tgmpa/class-tgm-plugin-activation.php:3600
+msgid ""
+"The installation and activation process is starting. This process may take a "
+"while on some hosts, so please be patient."
+msgstr ""
+
+#. translators: 1: plugin name.
+#. $this->upgrader->strings['skin_update_successful'] = __( '%1$s installed and activated successfully.', 'tgmpa' ) . ' <a href="#" class="hide-if-no-js" onclick="%2$s"><span>' . esc_html__( 'Show Details', 'tgmpa' ) . '</span><span class="hidden">' . esc_html__( 'Hide Details', 'tgmpa' ) . '</span>.</a>';
+#: tgmpa/class-tgm-plugin-activation.php:3604
+#, php-format
+msgid "%1$s installed and activated successfully."
+msgstr ""
+
+#: tgmpa/class-tgm-plugin-activation.php:3606
+msgid "All installations and activations have been completed."
+msgstr ""
+
+#. translators: 1: plugin name, 2: action number 3: total number of actions.
+#: tgmpa/class-tgm-plugin-activation.php:3608
+#, php-format
+msgid "Installing and Activating Plugin %1$s (%2$d/%3$d)"
+msgstr ""
+
+#: tgmpa/class-tgm-plugin-activation.php:3611
+msgid ""
+"The installation process is starting. This process may take a while on some "
+"hosts, so please be patient."
+msgstr ""
+
+#. translators: 1: plugin name.
+#. $this->upgrader->strings['skin_update_successful'] = esc_html__( '%1$s installed successfully.', 'tgmpa' ) . ' <a href="#" class="hide-if-no-js" onclick="%2$s"><span>' . esc_html__( 'Show Details', 'tgmpa' ) . '</span><span class="hidden">' . esc_html__( 'Hide Details', 'tgmpa' ) . '</span>.</a>';
+#: tgmpa/class-tgm-plugin-activation.php:3615
+#, php-format
+msgid "%1$s installed successfully."
+msgstr ""
+
+#: tgmpa/class-tgm-plugin-activation.php:3617
+msgid "All installations have been completed."
+msgstr ""
+
+#. translators: 1: plugin name, 2: action number 3: total number of actions.
+#: tgmpa/class-tgm-plugin-activation.php:3619
+#, php-format
+msgid "Installing Plugin %1$s (%2$d/%3$d)"
+msgstr ""
+
+#: tgmpa/config.php:232
+msgid "You have to install all required plugins!"
+msgstr ""
+
+#: tgmpa/config.php:282
+msgid ""
+"If you want to hide this message constantly you have to install all "
+"<u>required</u> plugins!"
+msgstr ""
+
+#: tgmpa/config.php:287
+#, php-format
+msgid "Install Recomenned %s Plugins"
+msgstr ""
+
+#: widgets/REBOOT_Widget_Blocks/widget.php:13
+msgid "Select and print block(s)"
+msgstr ""
+
+#: widgets/REBOOT_Widget_Blocks/widget.php:15
+#, php-format
+msgid "%s Blocks(s)"
+msgstr ""
+
+#: widgets/REBOOT_Widget_Blocks/widget.php:78
+#: widgets/REBOOT_Widget_Post_List/widget.php:83
+msgid "Title:"
+msgstr ""
+
+#: widgets/REBOOT_Widget_Post_List/widget.php:53
+msgid "You need to set the data settings of your widget!"
+msgstr ""
+
+#. Plugin Name of the plugin/theme
+msgid "Reboot Core"
+msgstr ""
+
+#. Description of the plugin/theme
+msgid "Core plugin for Reboot"
+msgstr ""
+
+#. Author of the plugin/theme
+msgid "Reboot"
+msgstr ""
+
+#. Author URI of the plugin/theme
+msgid "https://reboot.com.tr"
+msgstr ""
