@@ -42,6 +42,14 @@ if (!defined('REBOOT_AGENCY_EMAIL')) {
     define('REBOOT_AGENCY_EMAIL', 'info@reboot.com.tr');
 }
 
+if (!defined('REBOOT_AGENCY_EMAIL_AS_CC')) {
+    define('REBOOT_AGENCY_EMAIL_AS_CC', false);
+}
+
+if (!defined('REBOOT_AGENCY_EMAIL_AS_BCC')) {
+    define('REBOOT_AGENCY_EMAIL_AS_BCC', false);
+}
+
 
 /**
  * Client

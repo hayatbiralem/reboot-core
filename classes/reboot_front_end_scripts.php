@@ -72,8 +72,10 @@ if (!class_exists('reboot_front_end_scripts')) {
             // Scripts
             if (!empty($scripts)) {
                 foreach ($scripts as $file) {
+                    $handle = REBOOT_AGENCY_SLUG . '-' . sanitize_title($file['relative_path']);
+                    reboot_javascript_translations::load_translations($file['base_path'] . 'translations.php', $handle );
                     $deps = reboot_read_config($file['base_path'] . 'config.json', 'deps', []);
-                    wp_enqueue_script(REBOOT_AGENCY_SLUG . '-' . sanitize_title($file['relative_path']), $file['file_url'], $deps, reboot_get_assets_version($file['file_path'], false));
+                    wp_enqueue_script($handle, $file['file_url'], $deps, reboot_get_assets_version($file['file_path'], false));
                 }
             }
 

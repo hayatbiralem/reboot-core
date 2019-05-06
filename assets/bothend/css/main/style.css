@@ -86,3 +86,17 @@
     white-space: nowrap !important;
     width: 1px !important;
 }
+
+
+/**
+ * Fancy upload
+ */
+
+.c-fancy-upload__tip { padding: 10px 0; height: 46px; display: inline-block; vertical-align: top; }
+.c-fancy-upload { position: relative; display: inline-block; margin-right: 30px; height: 46px; max-width: 65%; vertical-align: top; overflow: hidden; }
+.c-fancy-upload, .c-fancy-upload * { cursor: pointer; }
+.c-fancy-upload .c-fancy-upload__file-name { display: block; padding: 10px 0 10px 5px; white-space: nowrap; max-width: 100%; overflow: hidden; -o-text-overflow: ellipsis; text-overflow: ellipsis; }
+.c-fancy-upload .c-fancy-upload__file-name:before { font-family: "Font Awesome 5 Free"; -moz-osx-font-smoothing: grayscale; -webkit-font-smoothing: antialiased; display: inline-block; font-style: normal; font-variant: normal; text-rendering: auto; line-height: 1; font-weight: 900; content: ""; padding-right: 15px; -webkit-transform-origin: 0 50%; -moz-transform-origin: 0 50%; -ms-transform-origin: 0 50%; -o-transform-origin: 0 50%; transform-origin: 0 50%; -webkit-transform: scale(1.56); -moz-transform: scale(1.56); -ms-transform: scale(1.56); -o-transform: scale(1.56); transform: scale(1.56); }
+.c-fancy-upload input[type=file] { font-size: 100px; position: absolute; z-index: 100; left: 0; top: 0; opacity: 0; }
+.c-fancy-upload .wpcf7-not-valid + .c-fancy-upload__file-name,
+.c-fancy-upload .wpcf7-not-valid + .c-fancy-upload__file-name:before { color: #f00; }

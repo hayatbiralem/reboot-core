@@ -18,7 +18,7 @@ if(!class_exists('reboot_cf7_hooks')) {
             add_filter('wpcf7_form_elements', 'do_shortcode');
 
             // Add Cc and/or Bcc from theme via filter
-            add_filter('wpcf7_mail_components', [$this, 'wpcf7_mail_components']);
+            add_filter('wpcf7_mail_components', [$this, 'wpcf7_mail_components'], 10, 3);
 
         }
 
@@ -31,9 +31,20 @@ if(!class_exists('reboot_cf7_hooks')) {
          * @return mixed
          */
         function wpcf7_mail_components( $components, $current_contact_form, $instance){
+            $cc = [];
+            $bcc = [];
+
+            if(REBOOT_AGENCY_EMAIL_AS_CC) {
+                $cc[] = REBOOT_AGENCY_EMAIL;
+            }
+
+            if(REBOOT_AGENCY_EMAIL_AS_BCC) {
+                $bcc[] = REBOOT_AGENCY_EMAIL;
+            }
+
             $additional_header_emails = [
-                'Cc' => apply_filters('reboot_cf7_cc', []),
-                'Bcc' => apply_filters('reboot_cf7_bcc', []),
+                'Cc' => apply_filters('reboot_cf7_cc', $cc),
+                'Bcc' => apply_filters('reboot_cf7_bcc', $bcc),
             ];
 
             $additional_headers = [];

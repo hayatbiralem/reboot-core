@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Reboot Core\n"
-"POT-Creation-Date: 2019-05-05 20:08+0300\n"
-"PO-Revision-Date: 2019-05-05 20:12+0300\n"
+"POT-Creation-Date: 2019-05-06 17:06+0300\n"
+"PO-Revision-Date: 2019-05-06 17:06+0300\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: tr\n"
@@ -21,7 +21,11 @@ msgstr ""
 "X-Poedit-SearchPath-0: .\n"
 "X-Poedit-SearchPathExcluded-0: *.js\n"
 
-#: classes/reboot_acf_hooks.php:23
+#: assets/bothend/js/main/translations.php:4
+msgid "No files selected"
+msgstr "Dosya seçilmedi"
+
+#: classes/reboot_acf_hooks.php:25
 #, php-format
 msgid "%s value is invalid"
 msgstr ""
