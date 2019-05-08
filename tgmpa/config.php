@@ -192,7 +192,8 @@ if (!function_exists('reboot_plugin_action_links')) {
 
         foreach ($reboot_tgmpa_plugins as $reboot_tgmpa_plugin) {
             if (
-                strpos($file, $reboot_tgmpa_plugin['plugin_file']) !== false
+                isset($reboot_tgmpa_plugin['plugin_file'])
+                && strpos($file, $reboot_tgmpa_plugin['plugin_file']) !== false
                 && isset($reboot_tgmpa_plugin['force_activation'])
                 && $reboot_tgmpa_plugin['force_activation']
                 && isset($reboot_tgmpa_plugin['is_plugin_active'])
