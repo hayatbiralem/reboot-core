@@ -8,7 +8,16 @@ if (!defined('ABSPATH')) {
 function reboot_acf_shortcode_support_for_message_field($field)
 {
 
-    if (empty($field['message']) || (is_admin() && (!function_exists('get_current_screen') || (get_current_screen())->post_type === "acf-field-group"))) {
+    if (
+        empty($field['message'])
+        || (
+            is_admin()
+            && (
+                !function_exists('get_current_screen')
+                || (get_current_screen())->post_type === "acf-field-group"
+            )
+        )
+    ) {
         return $field;
     }
 
