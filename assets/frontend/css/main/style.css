@@ -9,3 +9,15 @@
         width: 50% !important;
     }
 }
+
+@media (min-width: 992px) {
+    .has-zigzag-rows > .vc_row:nth-child(even) > .wpb_column:first-child {
+        -webkit-transform: translate(100%);
+        transform: translate(100%);
+    }
+
+    .has-zigzag-rows > .vc_row:nth-child(even) > .wpb_column:last-child {
+        -webkit-transform: translate(-100%);
+        transform: translate(-100%);
+    }
+}

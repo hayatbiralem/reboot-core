@@ -18,6 +18,7 @@ if (!class_exists('reboot_vc_common_param_extra_el_classes')) {
                 'vc_section' => [
                     __('White text color') => 'u-text-white',
                     __('Has grayscale image hover') => 'has-grayscale-image-hover',
+                    __('Has zigzag rows') => 'has-zigzag-rows',
                 ],
                 'vc_row' => [
                     __('White text color') => 'u-text-white',
