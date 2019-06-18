@@ -24,11 +24,13 @@ if (!class_exists('reboot_vc_common_param_extra_el_classes')) {
                     __('Has grayscale image hover') => 'has-grayscale-image-hover',
                     __('Has two columns at mobile') => 'has-two-columns-at-mobile',
                     __('Has one column under desktop') => 'has-one-column-under-desktop',
+                    __('Has white bg overlay under desktop') => 'has-white-bg-overlay-under-desktop',
                 ],
                 'vc_row_inner' => [
                     __('White text color') => 'u-text-white',
                     __('Has grayscale image hover') => 'has-grayscale-image-hover',
                     __('Has one column under desktop') => 'has-one-column-under-desktop',
+                    __('Has white bg overlay under desktop') => 'has-white-bg-overlay-under-desktop',
                 ],
             ];
 

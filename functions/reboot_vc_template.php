@@ -1,9 +1,10 @@
-<?php  if ( ! defined('ABSPATH')) exit('No direct script access allowed');
+<?php if (!defined('ABSPATH')) exit('No direct script access allowed');
 
 // Show template with specified ID
-if ( !function_exists( 'reboot_vc_template' ) ) {
+if (!function_exists('reboot_vc_template')) {
 
-    function reboot_vc_template($id) {
+    function reboot_vc_template($id)
+    {
         $layout = get_post($id);
         if (!empty($layout)) {
             global $reboot_vc_template_inside;
@@ -17,11 +18,15 @@ if ( !function_exists( 'reboot_vc_template' ) ) {
                     array('[vc_row', '[/vc_row]', '[vc_section', '[/vc_section]'),
                     $content);
             }
-            printf('<div class="vc-template-wrapper">%s</div>', do_shortcode( reboot_replace_special_vars($content) ));
+
+            // TODO: Alttaki satır condition kısmında soruna sebep oluyor.
+            // printf('<div class="vc-template-wrapper">%s</div>', do_shortcode( reboot_replace_special_vars($content) ));
+            printf('<div class="vc-template-wrapper">%s</div>', do_shortcode( $content ));
+
             $reboot_vc_template_inside = false;
             // Add VC custom styles to the inline CSS
-            $vc_custom_css = get_post_meta( $id, '_wpb_shortcodes_custom_css', true );
-            if ( !empty( $vc_custom_css ) ) {
+            $vc_custom_css = get_post_meta($id, '_wpb_shortcodes_custom_css', true);
+            if (!empty($vc_custom_css)) {
                 printf(
                     '<style type="text/css" data-type="vc-template-css">%s</style>',
                     strip_tags($vc_custom_css)

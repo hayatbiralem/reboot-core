@@ -17,8 +17,14 @@ if (!class_exists('reboot_custom_post_types_and_taxonomies')) {
 
         function __construct()
         {
-            add_action('after_setup_theme', [$this, 'register_custom_post_types']);
-            add_action('after_setup_theme', [$this, 'register_custom_taxonomies']);
+//            add_action('after_setup_theme', [$this, 'register_custom_post_types']);
+//            add_action('after_setup_theme', [$this, 'register_custom_taxonomies']);
+
+//            add_action('init', [$this, 'register_custom_taxonomies'], 9);
+//            add_action('init', [$this, 'register_custom_post_types'], 10);
+
+            add_action('after_setup_theme', [$this, 'register_custom_taxonomies'], 9);
+            add_action('after_setup_theme', [$this, 'register_custom_post_types'], 10);
 
             add_action('add_meta_boxes', [$this, 'remove_meta_boxes'], 999);
             add_action('admin_head', [$this, 'remove_meta_boxes'], 999);
