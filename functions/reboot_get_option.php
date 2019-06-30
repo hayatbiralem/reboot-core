@@ -13,25 +13,11 @@ if(!function_exists('reboot_get_option')) {
         return $value;
     }
 
-    function reboot_acf_set_language() {
-        global $sitepress;
-
-        if($sitepress) {
-            return $sitepress->get_default_language();
-        }
-
-        return '';
-    }
-
     function reboot_get_global_option($name) {
-        global $sitepress;
-        if($sitepress) {
-            add_filter('acf/settings/current_language', 'reboot_acf_set_language', 100);
-        }
+        add_filter('acf/settings/current_language', '__return_false', 100);
         $option = get_field($name, 'option');
-        if($sitepress) {
-            remove_filter('acf/settings/current_language', 'reboot_acf_set_language', 100);
-        }
+        remove_filter('acf/settings/current_language', '__return_false', 100);
+
         return $option;
     }
 

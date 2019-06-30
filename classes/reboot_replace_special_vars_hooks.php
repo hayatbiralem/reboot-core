@@ -20,6 +20,7 @@ if (!is_admin()) {
                 'reboot_shortcode',
                 'dt_default_button',
                 'ultimate_heading',
+                'ultimate_icon_list_item',
             ];
 
             public function __construct()

@@ -9,13 +9,7 @@ if(!function_exists('reboot_get_default_lang')) {
      */
     function reboot_get_default_lang()
     {
-        global $sitepress;
-
-        if($sitepress) {
-            return $sitepress->get_default_language();
-        }
-
-        return 'tr';
+        return apply_filters( 'wpml_default_language', NULL );
     }
 
 }

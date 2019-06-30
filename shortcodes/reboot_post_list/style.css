@@ -10,15 +10,25 @@
 }
 
 .c-post-list__title {
-    font-size: 125%;
+    color: #333;
 }
 
 .c-post-list__date,
 .c-post-list__description {
-    font-size: 75%;
+    color: #85868c;
 }
 
 .c-post-list__item {
     margin-bottom: 15px;
-    line-height: 1.5;
+}
+
+.c-post-list__image {
+    float: left;
+    width: 40px;
+    height: auto;
+    border-radius: 50%;
+}
+
+.c-post-list__image ~ span {
+    margin-left: 60px;
 }
