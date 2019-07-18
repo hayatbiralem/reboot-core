@@ -10,26 +10,28 @@ if (!is_admin()) {
         {
 
             static $attributes = [
-                'reboot_template' => ['condition'],
-//                'vc_section' => ['condition'],
-//                'vc_row' => ['condition'],
                 'vc_basic_grid' => ['custom_query'],
                 'vc_custom_heading' => ['text'],
+                'dt_fancy_image' => ['image'],
             ];
 
             static $contents = [
+                'vc_column_text',
+                'reboot_shortcode',
                 'dt_default_button',
+                'ultimate_heading',
+                'ultimate_icon_list_item',
             ];
 
             public function __construct()
             {
                 foreach (self::$attributes as $shortcode => $atts) {
-                    add_filter( "shortcode_atts_{$shortcode}", array($this, 'filter_atts'), 20, 4 );
+                    add_filter( "shortcode_atts_{$shortcode}", array($this, 'filter_atts'), 20, 5 );
                 }
 
                 add_filter( "do_shortcode_tag", array($this, 'filter_output'), 20, 4 );
 
-                add_filter('the_content', [$this, 'filter_the_content'], 99, 1);
+                add_filter('the_content', [$this, 'filter_the_content'], 999, 1);
             }
 
             public function filter_atts($out, $pairs, $atts, $shortcode){

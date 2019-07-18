@@ -4,6 +4,10 @@ if (!function_exists('reboot_replace_special_vars')) {
 
     function reboot_replace_special_vars($str)
     {
+//        if(strpos($str, 'email') !== false) {
+//            reboot_dd($str);
+//        }
+
         // bail early
         if (empty($str)) {
             return $str;

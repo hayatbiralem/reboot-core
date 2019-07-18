@@ -2,10 +2,39 @@
     .has-one-column-under-desktop > .wpb_column {
         width: 100% !important;
     }
+
+    .has-white-bg-overlay-under-desktop:before {
+        position: absolute;
+        z-index: 1;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+
+        display: block;
+        background-color: rgba(255,255,255,0.75);
+    }
+
+    .has-white-bg-overlay-under-desktop > .wpb_column {
+        position: relative;
+        z-index: 2;
+    }
 }
 
 @media (max-width: 767px) {
     .has-two-columns-at-mobile > .wpb_column {
         width: 50% !important;
+    }
+}
+
+@media (min-width: 992px) {
+    .has-zigzag-rows > .vc_row:nth-child(even) > .wpb_column:first-child {
+        -webkit-transform: translate(100%);
+        transform: translate(100%);
+    }
+
+    .has-zigzag-rows > .vc_row:nth-child(even) > .wpb_column:last-child {
+        -webkit-transform: translate(-100%);
+        transform: translate(-100%);
     }
 }

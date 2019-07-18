@@ -4,6 +4,7 @@ $args = [
     'post_type' => $post_type,
     'posts_per_page' => $count,
     'post_status' => 'publish',
+    'suppress_filters' => false,
 ];
 
 if (is_singular($post_type)) {
@@ -37,12 +38,23 @@ if (empty($items)) {
         <?php foreach ($items as $item) : ?>
             <li class="c-post-list__item">
                 <a href="<?= get_the_permalink($item) ?>" class="c-post-list__link">
-                    <?php // echo get_the_post_thumbnail($item, 'thumbnail', ['class' => 'c-post-list__image']) ?>
-                    <span class="c-post-list__date"><?= date_i18n(get_option('date_format'), strtotime($item->post_date)) ?></span>
+                    <?php
+                        if(has_post_thumbnail($item)) {
+                            echo get_the_post_thumbnail($item, 'thumbnail', ['class' => 'c-post-list__image']);
+                        }
+                    ?>
                     <span class="c-post-list__title"><?= apply_filters('reboot_post_list_title', $item->post_title) ?></span>
+                    <span class="c-post-list__date"><?= date_i18n(get_option('date_format'), strtotime($item->post_date)) ?></span>
+                    <?php
+                    /*
+
+                    <?php if (has_excerpt($item)) : ?>
                     <?php if (has_excerpt($item)) : ?>
                         <span class="c-post-list__description"><?= apply_filters('reboot_post_list_description', get_the_excerpt($item)) ?></span>
                     <?php endif; ?>
+
+                     */
+                    ?>
                 </a>
             </li>
         <?php endforeach; ?>

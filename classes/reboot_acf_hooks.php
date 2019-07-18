@@ -12,6 +12,7 @@ if (!class_exists('reboot_acf_hooks')) {
         function __construct()
         {
             add_filter('acf/validate_value/type=email', [$this, 'validate_value_type_email'], 10, 4);
+            add_filter('acf/fields/google_map/api', [$this, 'google_map_api']);
         }
 
         function validate_value_type_email($valid, $value, $field, $input)
@@ -29,9 +30,25 @@ if (!class_exists('reboot_acf_hooks')) {
             return $valid;
         }
 
+        function google_map_api($api)
+        {
+            /**
+             * Get API Key from Ultimate VC Addons
+             *
+             * So we do not need to update that key in code.
+             *
+             * Nice :)
+             */
+
+            if(function_exists('bsf_get_option')) {
+                $api['key'] = bsf_get_option('map_key');
+            }
+
+            return $api;
+        }
+
     }
 
     new reboot_acf_hooks();
 
 }
-

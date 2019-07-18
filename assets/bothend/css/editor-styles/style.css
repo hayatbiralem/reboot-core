@@ -1,0 +1,46 @@
+/**
+ * MCE Fixes
+ */
+
+.mce-menu .mce-menu-item.mce-active.mce-menu-item-preview * {
+    color: inherit !important;
+}
+
+/**
+ * Lead
+ */
+
+.r-es-lead {
+    font-weight: 300;
+    font-size: 150%;
+    line-height: 1.5;
+}
+
+.r-es-lead:not(:last-child) {
+    margin-bottom: 1em;
+}
+
+@media (min-width: 768px) {
+    .r-es-lead {
+        font-size: 200%;
+    }
+}
+
+/**
+ * Centered
+ */
+
+@media (min-width: 768px) {
+    .r-es-centered {
+        max-width: 83.3333%;
+        margin-left: auto !important;
+        margin-right: auto !important;
+        text-align: center !important;
+    }
+}
+
+@media (min-width: 992px) {
+    .r-es-centered {
+        max-width: 66.6666%;
+    }
+}

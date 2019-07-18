@@ -55,6 +55,19 @@ if (!class_exists('reboot_responsive_embed_for_wp_videos')) {
                     width: 100%;
                     height: 100%;
                 }
+
+                /**
+                 * Visual Composer Fix
+                 */
+
+                .wpb_video_wrapper > .o-responsive-embed {
+                    position: absolute !important;
+                    left: 0;
+                    top: 0;
+                    width: 100%;
+                    height: 100%;
+                    padding: 0;
+                }
             </style>
             <?php
         }

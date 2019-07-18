@@ -6,7 +6,7 @@
          * Fancy file inputs
          */
 
-        $('input[type=file]').each(function () {
+        $('.wpcf7-form input[type=file]').each(function () {
             var $this = $(this);
             var $parent = $this.parent();
 

@@ -100,3 +100,48 @@
 .c-fancy-upload input[type=file] { font-size: 100px; position: absolute; z-index: 100; left: 0; top: 0; opacity: 0; }
 .c-fancy-upload .wpcf7-not-valid + .c-fancy-upload__file-name,
 .c-fancy-upload .wpcf7-not-valid + .c-fancy-upload__file-name:before { color: #f00; }
+
+/**
+ * Shadow utility
+ */
+
+.u-shadow {
+    z-index: 100;
+    -webkit-box-shadow: 0 2px 10px rgba(0, 0,0,0.1) !important;
+    box-shadow: 0 2px 10px rgba(0, 0,0,0.1) !important;
+}
+
+/**
+ * increase-font-sizes
+ */
+
+@media (min-width: 768px) {
+
+    .increase-font-sizes * {
+        font-size: inherit !important;
+        line-height: 1.5 !important;
+    }
+
+    .increase-font-sizes .button,
+    .increase-font-sizes button,
+    .increase-font-sizes input[type="submit"] {
+        height: auto !important;
+    }
+
+    .increase-font-sizes-1dot25x { font-size: 1.25em !important; }
+    .increase-font-sizes-1dot5x { font-size: 1.5em !important; }
+    .increase-font-sizes-2x { font-size: 2em !important; }
+    .increase-font-sizes-2dot5x { font-size: 2.5em !important; }
+    .increase-font-sizes-3x { font-size: 3em !important; }
+
+}
+
+/**
+ * force-full-width-single-image
+ */
+
+.force-full-width-single-image,
+.force-full-width-single-image * {
+    width: 100% !important;
+    height: auto !important;
+}

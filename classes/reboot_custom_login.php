@@ -1,14 +1,16 @@
-<?php  if ( ! defined('ABSPATH')) exit('No direct script access allowed');
+<?php if (!defined('ABSPATH')) exit('No direct script access allowed');
 
-if(!class_exists('reboot_custom_login')) {
+if (!class_exists('reboot_custom_login')) {
 
-    class reboot_custom_login {
+    class reboot_custom_login
+    {
 
         /**
          * @var array
          */
         var $custom_login;
         var $menu_slug;
+        var $default_javascript_value;
 
         /**
          * clickcarrot_custom_sidebars constructor.
@@ -16,6 +18,7 @@ if(!class_exists('reboot_custom_login')) {
         function __construct()
         {
             $this->menu_slug = sprintf('%s-custom-login', REBOOT_AGENCY_SLUG);
+            $this->default_javascript_value = '';
 
             add_action('acf/init', [$this, 'acf_init'], 30);
             add_action('login_enqueue_scripts', array($this, 'print_styles'));
@@ -23,21 +26,24 @@ if(!class_exists('reboot_custom_login')) {
             add_filter('login_headertitle', array($this, 'login_headertitle'));
         }
 
-        function acf_init(){
+        function acf_init()
+        {
             $this->add_sub_page();
             $this->add_local_field_group();
         }
 
-        function add_sub_page(){
+        function add_sub_page()
+        {
             acf_add_options_sub_page(array(
-                'page_title' 	=> __('Custom Login', REBOOT_CORE_TEXT_DOMAIN),
-                'menu_title'	=> __('Custom Login', REBOOT_CORE_TEXT_DOMAIN),
-                'menu_slug'	=> $this->menu_slug,
-                'parent_slug'	=> REBOOT_AGENCY_SLUG,
+                'page_title' => __('Custom Login', REBOOT_CORE_TEXT_DOMAIN),
+                'menu_title' => __('Custom Login', REBOOT_CORE_TEXT_DOMAIN),
+                'menu_slug' => $this->menu_slug,
+                'parent_slug' => REBOOT_AGENCY_SLUG,
             ));
         }
 
-        function add_local_field_group(){
+        function add_local_field_group()
+        {
             acf_add_local_field_group(array(
                 'key' => 'group_custom_login',
                 'title' => 'Custom Login',
@@ -226,6 +232,63 @@ if(!class_exists('reboot_custom_login')) {
                                     ),
                                 ),
                             ),
+
+                            array(
+                                'key' => 'field_custom_login_css',
+                                'label' => 'Css',
+                                'name' => 'css',
+                                'type' => 'acf_code_field',
+                                'instructions' => '',
+                                'required' => 0,
+                                'conditional_logic' => 0,
+                                'wrapper' => array(
+                                    'width' => '',
+                                    'class' => '',
+                                    'id' => '',
+                                ),
+                                'default_value' => '',
+                                'placeholder' => '',
+                                'mode' => 'css',
+                                'theme' => 'monokai',
+                            ),
+
+                            array(
+                                'key' => 'field_custom_login_javascript',
+                                'label' => 'Javascript',
+                                'name' => 'javascript',
+                                'type' => 'acf_code_field',
+                                'instructions' => '',
+                                'required' => 0,
+                                'conditional_logic' => 0,
+                                'wrapper' => array(
+                                    'width' => '',
+                                    'class' => '',
+                                    'id' => '',
+                                ),
+                                'default_value' => $this->default_javascript_value,
+                                'placeholder' => '',
+                                'mode' => 'javascript',
+                                'theme' => 'monokai',
+                            ),
+
+                            array(
+                                'key' => 'field_custom_login_head',
+                                'label' => 'Head',
+                                'name' => 'head',
+                                'type' => 'acf_code_field',
+                                'instructions' => '',
+                                'required' => 0,
+                                'conditional_logic' => 0,
+                                'wrapper' => array(
+                                    'width' => '',
+                                    'class' => '',
+                                    'id' => '',
+                                ),
+                                'default_value' => '',
+                                'placeholder' => '',
+                                'mode' => 'htmlmixed',
+                                'theme' => 'monokai',
+                            ),
                         ),
                     ),
                 ),
@@ -254,24 +317,24 @@ if(!class_exists('reboot_custom_login')) {
          */
         function print_styles()
         {
-            if(!function_exists('get_field')) {
+            if (!function_exists('get_field')) {
                 return;
             }
 
             $this->custom_login = get_field('custom_login', 'option');
 
-            if(empty($this->custom_login)) {
+            if (empty($this->custom_login)) {
                 return;
             }
 
             $background_overlay = $this->custom_login['background_overlay']['color'];
-            $background_overlay_alpha = $this->hex2rgba( $background_overlay, ((float) $this->custom_login['background_overlay']['opacity']) / 100 );
-            if(!$this->custom_login['background_overlay']['opacity']) {
+            $background_overlay_alpha = $this->hex2rgba($background_overlay, ((float)$this->custom_login['background_overlay']['opacity']) / 100);
+            if (!$this->custom_login['background_overlay']['opacity']) {
                 $background_overlay_alpha = null;
             }
 
             $primary_color = $this->custom_login['primary_color']['color'];
-            $primary_color_alpha = $this->hex2rgba( $primary_color, ((float) $this->custom_login['primary_color']['opacity']) / 100 );
+            $primary_color_alpha = $this->hex2rgba($primary_color, ((float)$this->custom_login['primary_color']['opacity']) / 100);
 
             $hover_color = $primary_color_alpha;
 
@@ -281,10 +344,20 @@ if(!class_exists('reboot_custom_login')) {
 
             $background = $this->custom_login['images']['background_image']['url'];
 
+            $head = $this->custom_login['head'];
+            $css = $this->custom_login['css'];
+            $javascript = $this->custom_login['javascript'];
+            if($javascript == $this->default_javascript_value) {
+                $javascript = '';
+            } else {
+                $javascript = sprintf('<script>%s</script>', $javascript);
+            }
+
+            if(!empty($head)) {
+                echo $head;
+            }
+
             ?>
-            <!--
-        <?= var_export($this->custom_login, true); ?>
-        -->
             <style>
 
                 html,
@@ -296,9 +369,19 @@ if(!class_exists('reboot_custom_login')) {
                     display: none !important;
                 }
 
+                #login form,
+                .login form {
+                    border-radius: 5px;
+                }
+
                 #login #nav,
                 .login #nav {
                     text-align: center !important;
+                    background: #fff;
+                    padding-top: 20px;
+                    padding-bottom: 20px;
+                    border-radius: 5px;
+                    box-shadow: 0 1px 3px rgba(0, 0, 0, .13);
                 }
 
                 #login .button-primary {
@@ -318,25 +401,30 @@ if(!class_exists('reboot_custom_login')) {
                     background: #fff !important;
                     color: #333 !important; /* WebKit/Blink Browsers */
                 }
+
                 ::-moz-selection {
                     background: #fff !important;
                     color: #333 !important; /* Gecko Browsers */
                 }
+
                 <?php } else { ?>
                 ::selection {
                     color: #fff !important;
                     background: <?php echo $primary_color_alpha; ?> !important; /* WebKit/Blink Browsers */
                 }
+
                 ::-moz-selection {
                     color: #fff !important;
                     background: <?php echo $primary_color_alpha; ?> !important; /* Gecko Browsers */
                 }
+
                 <?php } ?>
 
                 #login a,
                 .login a {
                     color: <?php echo $primary_color_alpha; ?> !important;
-                    text-decoration: none; !important;
+                    text-decoration: none;
+                !important;
                 }
 
                 #login .button-primary {
@@ -369,6 +457,7 @@ if(!class_exists('reboot_custom_login')) {
                 input[type=checkbox]:checked:before {
                     color: <?php echo $primary_color_alpha; ?> !important;
                 }
+
                 <?php endif; ?>
 
                 <?php if(!empty($hover_color)) : ?>
@@ -380,6 +469,7 @@ if(!class_exists('reboot_custom_login')) {
                 #login .button-primary:hover {
                     background-color: <?php echo $hover_color; ?> !important;
                 }
+
                 <?php endif; ?>
 
                 <?php if( !empty($background) ) : ?>
@@ -387,6 +477,7 @@ if(!class_exists('reboot_custom_login')) {
                     background: url(<?php echo $background; ?>) scroll no-repeat center center !important;
                     background-size: cover !important;
                 }
+
                 <?php endif; ?>
 
                 <?php if (!empty($background_overlay_alpha)) : ?>
@@ -407,6 +498,7 @@ if(!class_exists('reboot_custom_login')) {
                     position: relative;
                     z-index: 2;
                 }
+
                 <?php endif; ?>
 
                 <?php if( !empty($logo) ) : ?>
@@ -416,8 +508,7 @@ if(!class_exists('reboot_custom_login')) {
                     margin-bottom: 25px !important;
                     padding: 0 !important;
                     padding-bottom: <?php echo round(9/16, 6) * 100; ?>% !important;
-                <?php if(!empty($logo_width) && $logo_height) : ?>
-                    padding-bottom: <?php echo round($logo_height/$logo_width, 6) * 100; ?>% !important;
+                <?php if(!empty($logo_width) && $logo_height) : ?> padding-bottom: <?php echo round($logo_height/$logo_width, 6) * 100; ?>% !important;
                 <?php endif; ?>
                 }
 
@@ -438,8 +529,19 @@ if(!class_exists('reboot_custom_login')) {
                 }
 
                 <?php endif; ?>
+
+                <?php if(!empty($css)) : ?>
+                <?= $css ?>
+                <?php endif ?>
             </style>
+
+            <?php if(!empty($javascript)) : ?>
+                <?= $javascript ?>
+            <?php endif ?>
+
             <?php
+
+            return;
         }
 
         /**
@@ -449,38 +551,39 @@ if(!class_exists('reboot_custom_login')) {
          * @param bool $opacity
          * @return string
          */
-        function hex2rgba($color, $opacity = false) {
+        function hex2rgba($color, $opacity = false)
+        {
 
             $default = 'rgb(0,0,0)';
 
             //Return default if no color provided
-            if(empty($color))
+            if (empty($color))
                 return $default;
 
             //Sanitize $color if "#" is provided
-            if ($color[0] == '#' ) {
-                $color = substr( $color, 1 );
+            if ($color[0] == '#') {
+                $color = substr($color, 1);
             }
 
             //Check if color has 6 or 3 characters and get values
             if (strlen($color) == 6) {
-                $hex = array( $color[0] . $color[1], $color[2] . $color[3], $color[4] . $color[5] );
-            } elseif ( strlen( $color ) == 3 ) {
-                $hex = array( $color[0] . $color[0], $color[1] . $color[1], $color[2] . $color[2] );
+                $hex = array($color[0] . $color[1], $color[2] . $color[3], $color[4] . $color[5]);
+            } elseif (strlen($color) == 3) {
+                $hex = array($color[0] . $color[0], $color[1] . $color[1], $color[2] . $color[2]);
             } else {
                 return $default;
             }
 
             //Convert hexadec to rgb
-            $rgb =  array_map('hexdec', $hex);
+            $rgb = array_map('hexdec', $hex);
 
             //Check if opacity is set(rgba or rgb)
-            if($opacity){
-                if(abs($opacity) > 1)
+            if ($opacity) {
+                if (abs($opacity) > 1)
                     $opacity = 1.0;
-                $output = 'rgba('.implode(",",$rgb).','.$opacity.')';
+                $output = 'rgba(' . implode(",", $rgb) . ',' . $opacity . ')';
             } else {
-                $output = 'rgb('.implode(",",$rgb).')';
+                $output = 'rgb(' . implode(",", $rgb) . ')';
             }
 
             //Return rgb(a) color string

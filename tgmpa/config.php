@@ -145,6 +145,14 @@ $reboot_tgmpa_plugins = array(
         'required' => false,
         'force_activation' => false,
     ],
+
+    [
+        'name' => 'ACF Code Field',
+        'slug' => 'acf-code-field',
+        'is_callable' => '',
+        'required' => false,
+        'force_activation' => false,
+    ],
     
 );
 

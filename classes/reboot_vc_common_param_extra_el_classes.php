@@ -16,19 +16,42 @@ if (!class_exists('reboot_vc_common_param_extra_el_classes')) {
         {
             self::$tags = [
                 'vc_section' => [
+                    __('Has shadow') => 'u-shadow',
                     __('White text color') => 'u-text-white',
                     __('Has grayscale image hover') => 'has-grayscale-image-hover',
+                    __('Has zigzag rows') => 'has-zigzag-rows',
                 ],
                 'vc_row' => [
+                    __('Has shadow') => 'u-shadow',
                     __('White text color') => 'u-text-white',
                     __('Has grayscale image hover') => 'has-grayscale-image-hover',
                     __('Has two columns at mobile') => 'has-two-columns-at-mobile',
                     __('Has one column under desktop') => 'has-one-column-under-desktop',
+                    __('Has white bg overlay under desktop') => 'has-white-bg-overlay-under-desktop',
+                    __('Increase font sizes base (makes all child font sizes equal, probably 16px)') => 'increase-font-sizes',
+                    __('Increase font sizes 1.25x') => 'increase-font-sizes-1dot25x',
+                    __('Increase font sizes 1.5x') => 'increase-font-sizes-1dot5x',
+                    __('Increase font sizes 2x') => 'increase-font-sizes-2x',
+                    __('Increase font sizes 2.5x') => 'increase-font-sizes-2dot5x',
+                    __('Increase font sizes 3x') => 'increase-font-sizes-3x',
                 ],
                 'vc_row_inner' => [
+                    __('Has shadow') => 'u-shadow',
                     __('White text color') => 'u-text-white',
                     __('Has grayscale image hover') => 'has-grayscale-image-hover',
                     __('Has one column under desktop') => 'has-one-column-under-desktop',
+                    __('Has white bg overlay under desktop') => 'has-white-bg-overlay-under-desktop',
+                ],
+                'vc_column' => [
+                    __('Has shadow') => 'u-shadow',
+                    __('White text color') => 'u-text-white',
+                ],
+                'vc_column_inner' => [
+                    __('Has shadow') => 'u-shadow',
+                    __('White text color') => 'u-text-white',
+                ],
+                'vc_single_image' => [
+                    __('Force full width single image') => 'force-full-width-single-image',
                 ],
             ];
 
