@@ -15,21 +15,27 @@ if(!class_exists('reboot_the7_presscore_page_title')) {
 
         function fancy_title_tag( $title_html ){
 
+            if(!function_exists('get_field')) {
+                return $title_html;
+            }
+
             $reboot_fancy_title_tag = get_field('reboot_fancy_title_tag');
 
-            if(!empty($reboot_fancy_title_tag) && $reboot_fancy_title_tag != 'h1') {
-                $title_html = str_replace(
-                    [
-                        '<h1 ',
-                        '</h1>',
-                    ],
-                    [
-                        "<{$reboot_fancy_title_tag} ",
-                        "</{$reboot_fancy_title_tag}>",
-                    ],
-                    $title_html
-                );
+            if(empty($reboot_fancy_title_tag) || $reboot_fancy_title_tag == 'h1') {
+                return $title_html;
             }
+
+            $title_html = str_replace(
+                [
+                    '<h1 ',
+                    '</h1>',
+                ],
+                [
+                    "<{$reboot_fancy_title_tag} ",
+                    "</{$reboot_fancy_title_tag}>",
+                ],
+                $title_html
+            );
 
             return $title_html;
         }
