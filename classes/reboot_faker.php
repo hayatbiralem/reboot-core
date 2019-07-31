@@ -4,6 +4,19 @@ if (!defined('ABSPATH')) {
     exit('No direct script access allowed');
 }
 
+/**
+ * Usage
+ *
+
+    if(isset($_REQUEST['reboot-faker'])) {
+        add_action('init', function(){
+            reboot_faker::posts(false);
+        });
+    }
+
+ */
+
+
 if (!class_exists('reboot_faker')) {
 
     class reboot_faker
@@ -12,7 +25,7 @@ if (!class_exists('reboot_faker')) {
         private static $required_post_fields = ['post_type', 'post_title'];
         private static $required_term_fields = ['term', 'taxonomy'];
 
-        static function posts()
+        static function posts($check_post_title_if_exists = true)
         {
             $file = locate_template(array('reboot/posts.json'));
 
@@ -37,7 +50,7 @@ if (!class_exists('reboot_faker')) {
             $report = [];
 
             foreach ($posts as $post) {
-                $report[] = self::insert_post($post);
+                $report[] = self::insert_post($post, $check_post_title_if_exists);
             }
 
             if(apply_filters('reboot_faker_die', true)) {
@@ -78,7 +91,7 @@ if (!class_exists('reboot_faker')) {
             }
         }
 
-        static function insert_post($post)
+        static function insert_post($post, $check_post_title_if_exists = true)
         {
             $missing = [];
 
@@ -93,10 +106,12 @@ if (!class_exists('reboot_faker')) {
                 return sprintf( __("Missing: %s"), implode(", ", $missing));
             }
 
-            $exists = get_page_by_title($post['post_title'], OBJECT, $post['post_type']);
+            if($check_post_title_if_exists) {
+                $exists = get_page_by_title($post['post_title'], OBJECT, $post['post_type']);
 
-            if($exists) {
-                return sprintf( __('Post exists: [%1$s](%2$s)'), $post['post_title'], get_permalink($exists->ID));
+                if($exists) {
+                    return sprintf( __('Post exists: [%1$s](%2$s)'), $post['post_title'], get_permalink($exists->ID));
+                }
             }
 
             $id = wp_insert_post($post);

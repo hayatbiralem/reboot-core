@@ -4,6 +4,10 @@ if(!function_exists('reboot_get_option')) {
 
     function reboot_get_option($name = '')
     {
+        if(!function_exists('get_field')) {
+            return NULL;
+        }
+
         $value = get_field($name, 'option');
 
         if(reboot_is_empty($value) && !reboot_is_default_lang()) {
@@ -14,6 +18,10 @@ if(!function_exists('reboot_get_option')) {
     }
 
     function reboot_get_global_option($name) {
+        if(!function_exists('get_field')) {
+            return NULL;
+        }
+
         add_filter('acf/settings/current_language', '__return_false', 100);
         $option = get_field($name, 'option');
         remove_filter('acf/settings/current_language', '__return_false', 100);
