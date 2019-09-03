@@ -31,7 +31,7 @@ if (!class_exists('reboot_dashboard_setup')) {
             unset($wp_meta_boxes['dashboard']['normal']['core']['bbp-dashboard-right-now']);
             // yoast seo
             unset($wp_meta_boxes['dashboard']['normal']['core']['yoast_db_widget']);
-            unset($wp_meta_boxes['dashboard']['normal']['core']['wpseo-dashboard-overview']);
+            // unset($wp_meta_boxes['dashboard']['normal']['core']['wpseo-dashboard-overview']);
             // gravity forms
             unset($wp_meta_boxes['dashboard']['normal']['core']['rg_forms_dashboard']);
             // YIHT
