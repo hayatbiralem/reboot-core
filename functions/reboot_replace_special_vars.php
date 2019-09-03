@@ -54,6 +54,21 @@ if (!function_exists('reboot_replace_special_vars')) {
             }
         }
 
+        // get "i" and "span" definitions
+        $re = '/\{(i|span) ([^\}]+)\}/m';
+        preg_match_all($re, $str, $matches, PREG_SET_ORDER, 0);
+
+        if (!empty($matches)) {
+            foreach ($matches as $match) {
+
+                if (array_key_exists($match[0], $data)) {
+                    continue;
+                }
+
+                $data[$match[0]] = sprintf('<%1$s class="%2$s"></%1$s>', $match[1], $match[2]);
+            }
+        }
+
         if(empty($data)) {
             return $str;
         }

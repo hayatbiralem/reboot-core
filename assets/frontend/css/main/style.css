@@ -1,3 +1,7 @@
+.reset-top-padding-of-columns .vc_column-inner {
+    padding-top: 0 !important;
+}
+
 @media (max-width: 991px) {
     .has-one-column-under-desktop > .wpb_column {
         width: 100% !important;
@@ -12,7 +16,7 @@
         left: 0;
 
         display: block;
-        background-color: rgba(255,255,255,0.75);
+        background-color: rgba(255, 255, 255, 0.75);
     }
 
     .has-white-bg-overlay-under-desktop > .wpb_column {

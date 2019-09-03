@@ -20,6 +20,7 @@ if (!class_exists('reboot_vc_common_param_extra_el_classes')) {
                     __('White text color') => 'u-text-white',
                     __('Has grayscale image hover') => 'has-grayscale-image-hover',
                     __('Has zigzag rows') => 'has-zigzag-rows',
+                    __('Reset top padding of columns') => 'reset-top-padding-of-columns',
                 ],
                 'vc_row' => [
                     __('Has shadow') => 'u-shadow',
@@ -34,6 +35,7 @@ if (!class_exists('reboot_vc_common_param_extra_el_classes')) {
                     __('Increase font sizes 2x') => 'increase-font-sizes-2x',
                     __('Increase font sizes 2.5x') => 'increase-font-sizes-2dot5x',
                     __('Increase font sizes 3x') => 'increase-font-sizes-3x',
+                    __('Reset top padding of columns') => 'reset-top-padding-of-columns',
                 ],
                 'vc_row_inner' => [
                     __('Has shadow') => 'u-shadow',
@@ -41,6 +43,7 @@ if (!class_exists('reboot_vc_common_param_extra_el_classes')) {
                     __('Has grayscale image hover') => 'has-grayscale-image-hover',
                     __('Has one column under desktop') => 'has-one-column-under-desktop',
                     __('Has white bg overlay under desktop') => 'has-white-bg-overlay-under-desktop',
+                    __('Reset top padding of columns') => 'reset-top-padding-of-columns',
                 ],
                 'vc_column' => [
                     __('Has shadow') => 'u-shadow',
