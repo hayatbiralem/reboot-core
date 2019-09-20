@@ -112,27 +112,42 @@
 }
 
 /**
+ * Align
+ */
+
+@media (max-width: 767px) {
+    .u-center-at-mobile,
+    .u-center-at-mobile h1,
+    .u-center-at-mobile h2,
+    .u-center-at-mobile h3,
+    .u-center-at-mobile h4,
+    .u-center-at-mobile .ubtn-ctn-left {
+        text-align: center !important;
+    }
+}
+
+/**
  * increase-font-sizes
  */
 
 @media (min-width: 768px) {
 
-    .increase-font-sizes * {
+    html body [class*="increase-font-sizes"] * {
         font-size: inherit !important;
         line-height: 1.5 !important;
     }
 
-    .increase-font-sizes .button,
-    .increase-font-sizes button,
-    .increase-font-sizes input[type="submit"] {
+    html body .increase-font-sizes .button,
+    html body .increase-font-sizes button,
+    html body .increase-font-sizes input[type="submit"] {
         height: auto !important;
     }
 
-    .increase-font-sizes-1dot25x { font-size: 1.25em !important; }
-    .increase-font-sizes-1dot5x { font-size: 1.5em !important; }
-    .increase-font-sizes-2x { font-size: 2em !important; }
-    .increase-font-sizes-2dot5x { font-size: 2.5em !important; }
-    .increase-font-sizes-3x { font-size: 3em !important; }
+    html body .increase-font-sizes-1dot25x { font-size: 1.25em !important; }
+    html body .increase-font-sizes-1dot5x { font-size: 1.5em !important; }
+    html body .increase-font-sizes-2x { font-size: 2em !important; }
+    html body .increase-font-sizes-2dot5x { font-size: 2.5em !important; }
+    html body .increase-font-sizes-3x { font-size: 3em !important; }
 
 }
 

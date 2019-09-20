@@ -1,13 +1,9 @@
 <?php if (!defined('ABSPATH')) exit('No direct script access allowed');
 
-return array(
-    "name" => sprintf( __("%s Template", REBOOT_CORE_TEXT_DOMAIN), REBOOT_AGENCY ),
-    "description" => __('Prints custom block template', REBOOT_CORE_TEXT_DOMAIN),
-    "icon" => "icon-template",
-    "base" => "reboot_template",
-    "class" => "",
-    "category" => sprintf( __('%s Elements', REBOOT_CORE_TEXT_DOMAIN), REBOOT_AGENCY ),
-    "params" => array(
+$params = [];
+
+if(!defined('REBOOT_CORE_DISABLE_BLOCKS') || !REBOOT_CORE_DISABLE_BLOCKS) {
+    $params = array(
 
         /**
          * General
@@ -24,6 +20,12 @@ return array(
         ),
 
         array(
+            'type' => 'checkbox',
+            'heading' => __( 'Disable wrapper', REBOOT_CORE_TEXT_DOMAIN ),
+            'param_name' => 'disable_wrapper',
+        ),
+
+        array(
             "type" => "textfield",
             "class" => "",
             "heading" => __("Condition", REBOOT_CORE_TEXT_DOMAIN),
@@ -33,5 +35,15 @@ return array(
             'group' => sprintf(__('%s Condition', REBOOT_CORE_TEXT_DOMAIN), REBOOT_AGENCY),
         ),
 
-    ),
+    );
+}
+
+return array(
+    "name" => sprintf( __("%s Template", REBOOT_CORE_TEXT_DOMAIN), REBOOT_AGENCY ),
+    "description" => __('Prints custom block template', REBOOT_CORE_TEXT_DOMAIN),
+    "icon" => "icon-template",
+    "base" => "reboot_template",
+    "class" => "",
+    "category" => sprintf( __('%s Elements', REBOOT_CORE_TEXT_DOMAIN), REBOOT_AGENCY ),
+    "params" => $params,
 );

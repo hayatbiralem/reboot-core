@@ -101,9 +101,10 @@ if (!class_exists('reboot_custom_post_types_and_taxonomies')) {
                 'query_var' => true,
             ];
 
-            $this->custom_post_types = array(
+            $this->custom_post_types = array();
 
-                'block' => [
+            if(!defined('REBOOT_CORE_DISABLE_BLOCKS') || !REBOOT_CORE_DISABLE_BLOCKS) {
+                $this->custom_post_types['block'] = [
                     'name' => 'block',
                     'remove_meta_boxes' => [
                         'wpseo_meta' => 'normal',
@@ -116,9 +117,8 @@ if (!class_exists('reboot_custom_post_types_and_taxonomies')) {
                             __('Blocks', REBOOT_CORE_TEXT_DOMAIN)
                         ),
                     ]
-                ],
-
-            );
+                ];
+            }
 
             $this->custom_post_types = apply_filters('reboot_custom_post_types', $this->custom_post_types);
 

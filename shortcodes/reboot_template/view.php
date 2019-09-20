@@ -6,4 +6,8 @@ if (isset($condition) && !empty($condition) && !filter_var(reboot_replace_specia
 
 // echo (get_post($id))->post_content;
 
-reboot_vc_template($id);
+if(isset($disable_wrapper)) {
+    reboot_vc_template($id, $disable_wrapper);
+} else {
+    reboot_vc_template($id);
+}
