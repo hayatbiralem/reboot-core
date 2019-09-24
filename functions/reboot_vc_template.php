@@ -3,7 +3,7 @@
 // Show template with specified ID
 if (!function_exists('reboot_vc_template')) {
 
-    function reboot_vc_template($id)
+    function reboot_vc_template($id, $disable_wrapper = false)
     {
         $layout = get_post($id);
         if (!empty($layout)) {
@@ -21,7 +21,12 @@ if (!function_exists('reboot_vc_template')) {
 
             // TODO: Alttaki satır condition kısmında soruna sebep oluyor.
             // printf('<div class="vc-template-wrapper">%s</div>', do_shortcode( reboot_replace_special_vars($content) ));
-            printf('<div class="vc-template-wrapper">%s</div>', do_shortcode( $content ));
+
+            if($disable_wrapper) {
+                echo do_shortcode( $content );
+            } else {
+                printf('<div class="vc-template-wrapper">%s</div>', do_shortcode( $content ));
+            }
 
             $reboot_vc_template_inside = false;
             // Add VC custom styles to the inline CSS

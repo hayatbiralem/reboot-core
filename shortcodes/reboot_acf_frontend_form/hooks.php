@@ -1,4 +1,4 @@
-<?php
+<?php if (!defined('ABSPATH')) exit('No direct script access allowed');
 
 add_action('get_header', function(){
     global $post;
