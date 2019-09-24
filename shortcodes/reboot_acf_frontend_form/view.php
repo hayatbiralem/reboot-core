@@ -2,9 +2,9 @@
 
 $args = [
     'post_id' => 'new_post',
-    'post_title' => true,
+    'post_title' => $post_title ?: false,
     'new_post'		=> array(
-        'post_type'		=> 'booking',
+        'post_type'		=> $post_type ?: 'post',
         'post_status'		=> 'publish'
     ),
     'updated_message' => false,

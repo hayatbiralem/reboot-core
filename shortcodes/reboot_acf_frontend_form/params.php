@@ -24,6 +24,21 @@ return array(
         ),
 
         array(
+            'type' => 'checkbox',
+            'heading' => __( 'Post title?', REBOOT_CORE_TEXT_DOMAIN ),
+            'param_name' => 'post_title',
+        ),
+
+        array(
+            "type" => "textfield",
+            "class" => "",
+            "heading" => __("Post Type", REBOOT_CORE_TEXT_DOMAIN),
+            "param_name" => "post_type",
+            "value" => "post",
+            "std" => __("Update", REBOOT_CORE_TEXT_DOMAIN),
+        ),
+
+        array(
             "type" => "textfield",
             "class" => "",
             "heading" => __("Submit Value", REBOOT_CORE_TEXT_DOMAIN),
