@@ -12,8 +12,7 @@ if (!function_exists('reboot_agency_logo')) {
             return;
         }
 
-        echo sprintf('<a class="c-agency-logo" title="Reboot" href="https://reboot.com.tr" target="_blank" rel="nofollow">%s</a>', $svg);
-
+        echo sprintf('<a class="c-agency-logo" title="' . REBOOT_AGENCY . '" href="' . REBOOT_AGENCY_URL . '" target="_blank" rel="nofollow">%s</a>', $svg);
     }
 
 }

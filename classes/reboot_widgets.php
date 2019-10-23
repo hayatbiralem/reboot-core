@@ -6,23 +6,40 @@ if (!class_exists('reboot_widgets')) {
     {
 
         public $widgets = [];
+        public $paths = [];
 
         /**
          * Constructor
          */
         public function __construct()
         {
-            $file_paths = reboot_get_file_paths_by_folder( REBOOT_CORE_PATH, REBOOT_CORE_URL, 'widgets', 'widget.php' );
-            foreach ($file_paths as $file_path) {
-                require_once $file_path['file_path'];
+            $paths = $this->get_paths();
 
-                $hooks_file_path = $file_path['base_path'] . 'hooks.php';
-                if(file_exists($hooks_file_path)) {
-                    require_once $hooks_file_path;
+            if(!empty($paths)) {
+                $this->paths = [];
+                foreach ($paths as $path => $url) {
+                    $folder_paths = reboot_get_file_paths_by_folder($path, $url, 'widgets', 'widget.php');
+                    if(!empty($folder_paths)) {
+                        $this->paths = array_merge($this->paths, $folder_paths);
+                    }
                 }
             }
 
-            $this->widgets = array_column($file_paths, 'sub_dir_name');
+            // reboot_dd($this->paths);
+
+            if(!empty($this->paths)) {
+
+                foreach ($this->paths as $file_path) {
+                    require_once $file_path['file_path'];
+                    $hooks_file_path = $file_path['base_path'] . 'hooks.php';
+                    if(file_exists($hooks_file_path)) {
+                        require_once $hooks_file_path;
+                    }
+                }
+
+            }
+
+            $this->widgets = array_column($this->paths, 'sub_dir_name');
             add_action('widgets_init', [$this, 'register']);
         }
 
@@ -43,6 +60,15 @@ if (!class_exists('reboot_widgets')) {
                     register_widget($widget);
                 }
             }
+        }
+
+        function get_paths()
+        {
+            $paths = [];
+            $paths[REBOOT_CORE_PATH] = REBOOT_CORE_URL;
+            $paths[REBOOT_CHILD_PATH . REBOOT_DIRECTORY_NAME . '/'] = REBOOT_CHILD_URL . REBOOT_DIRECTORY_NAME . '/';
+            $paths = apply_filters('reboot_vc_shortcode_paths', $paths);
+            return $paths;
         }
     }
 
