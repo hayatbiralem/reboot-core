@@ -6,8 +6,14 @@ if (isset($condition) && !empty($condition) && !filter_var(reboot_replace_specia
 
 // echo (get_post($id))->post_content;
 
+$args = [$id];
+
 if(isset($disable_wrapper)) {
-    reboot_vc_template($id, $disable_wrapper);
-} else {
-    reboot_vc_template($id);
+    $options['disable_wrapper'] = $disable_wrapper;
 }
+
+if(isset($formatter)) {
+    $options['formatter'] = $formatter;
+}
+
+reboot_vc_template($id, $options);

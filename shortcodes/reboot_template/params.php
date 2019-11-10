@@ -26,6 +26,19 @@ if(!defined('REBOOT_CORE_DISABLE_BLOCKS') || !REBOOT_CORE_DISABLE_BLOCKS) {
         ),
 
         array(
+            'type' => 'dropdown',
+            'heading' => __('Formatter', REBOOT_CORE_TEXT_DOMAIN),
+            'value' => array_merge(
+                [ __('Select...', REBOOT_CORE_TEXT_DOMAIN) => '' ],
+                reboot_get_template_formatters()
+            ),
+            'std' => '',
+            'admin_label' => true,
+            'param_name' => 'formatter',
+            'description' => __('Select formatter.', REBOOT_CORE_TEXT_DOMAIN),
+        ),
+
+        array(
             "type" => "textfield",
             "class" => "",
             "heading" => __("Condition", REBOOT_CORE_TEXT_DOMAIN),

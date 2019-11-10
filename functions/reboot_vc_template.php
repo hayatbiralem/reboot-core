@@ -3,13 +3,27 @@
 // Show template with specified ID
 if (!function_exists('reboot_vc_template')) {
 
-    function reboot_vc_template($id, $disable_wrapper = false)
+    function reboot_vc_template($id, $options = [])
     {
         $layout = get_post($id);
         if (!empty($layout)) {
             global $reboot_vc_template_inside;
             $reboot_vc_template_inside = true;
-            $content = shortcode_unautop(trim($layout->post_content));
+
+            $content = trim($layout->post_content);
+
+            if(!empty($options['formatter']) && is_callable($options['formatter'])) {
+                $options = array_merge(
+                    $options,
+                    [
+                        'id' => $id,
+                        'layout' => $layout,
+                    ]
+                );
+                $content = call_user_func_array($options['formatter'], [ $content, $options ]);
+            }
+
+            $content = shortcode_unautop($content);
             // In WordPress 4.9 post content wrapped with <p>...</p>
             // and shortcode_unautop() not remove it - do it manual
             if (strpos($content, '<p>[vc_row') !== false || strpos($content, '<p>[vc_section') !== false) {
@@ -22,7 +36,7 @@ if (!function_exists('reboot_vc_template')) {
             // TODO: Alttaki satır condition kısmında soruna sebep oluyor.
             // printf('<div class="vc-template-wrapper">%s</div>', do_shortcode( reboot_replace_special_vars($content) ));
 
-            if($disable_wrapper) {
+            if($options['disable_wrapper']) {
                 echo do_shortcode( $content );
             } else {
                 printf('<div class="vc-template-wrapper">%s</div>', do_shortcode( $content ));

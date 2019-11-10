@@ -12,3 +12,15 @@
 [data-vc-shortcode-param-name="extra_el_classes"] label.vc_checkbox-label {
     display: block;
 }
+
+span.vc_admin_label.admin_label_reboot_template[style*=inline] {
+    display: block !important;
+    margin-bottom: 50px;
+    background: darkorange;
+    color: #fff;
+    padding: 5px 10px;
+}
+
+span.vc_admin_label.admin_label_reboot_template[style*=inline]:before {
+    content: "TOP ROW WILL VE REPLACED with ";
+}

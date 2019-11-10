@@ -23,6 +23,8 @@ if (!class_exists('reboot_vc_row_template')) {
             // add_action('vc_after_init', array($this, 'shortcode_atts_hooks'), 20, 0);
 
             $this->add_do_shortcode_tag_hook();
+
+            add_filter('reboot_template_formatters', [$this]);
         }
 
 //        public function shortcode_atts_hooks()
@@ -53,6 +55,20 @@ if (!class_exists('reboot_vc_row_template')) {
                         'admin_label' => true,
                         'param_name' => 'reboot_template',
                         'description' => __('Select block.', REBOOT_CORE_TEXT_DOMAIN),
+                        'group' => sprintf(__('%s Template', REBOOT_CORE_TEXT_DOMAIN), REBOOT_AGENCY),
+                    ),
+
+                    array(
+                        'type' => 'dropdown',
+                        'heading' => __('Formatter', REBOOT_CORE_TEXT_DOMAIN),
+                        'value' => array_merge(
+                            [ __('Select...', REBOOT_CORE_TEXT_DOMAIN) => '' ],
+                            reboot_get_template_formatters()
+                        ),
+                        'std' => '',
+                        'admin_label' => true,
+                        'param_name' => 'reboot_template_formatter',
+                        'description' => __('Select formatter.', REBOOT_CORE_TEXT_DOMAIN),
                         'group' => sprintf(__('%s Template', REBOOT_CORE_TEXT_DOMAIN), REBOOT_AGENCY),
                     ),
 
@@ -94,7 +110,7 @@ if (!class_exists('reboot_vc_row_template')) {
             if (isset($attr['reboot_template']) && !empty($attr['reboot_template'])) {
 
                 // $this->remove_do_shortcode_tag_hook();
-                $replace = do_shortcode('[reboot_template id="'.$attr['reboot_template'].'" disable_wrapper="1"]');
+                $replace = do_shortcode('[reboot_template id="'.$attr['reboot_template'].'" disable_wrapper="1"'.( $attr['reboot_template_formatter'] ? ' formatter="'.$attr['reboot_template_formatter'].'"' : '' ).']');
                 // $this->add_do_shortcode_tag_hook();
 
                 $replace = trim($replace);

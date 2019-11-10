@@ -53,11 +53,18 @@ if (!class_exists('REBOOT_CORE')) {
     define('REBOOT_CHILD_TGMPA_PATH', REBOOT_CHILD_PATH . REBOOT_DIRECTORY_NAME . '/tgmpa/');
     define('REBOOT_CHILD_TGMPA_PLUGINS_PATH', REBOOT_CHILD_TGMPA_PATH . 'plugins/');
 
-    require REBOOT_CORE_PATH . 'config.php';
-    require REBOOT_CORE_PATH . 'bootstrap.php';
-
     class REBOOT_CORE
     {
+        function __construct()
+        {
+            add_action('plugins_loaded', [$this, 'plugins_loaded']);
+        }
+
+        function plugins_loaded(){
+            require REBOOT_CORE_PATH . 'config.php';
+            require REBOOT_CORE_PATH . 'bootstrap.php';
+        }
+
         static function getVersion()
         {
             return REBOOT_CORE_VERSION;
