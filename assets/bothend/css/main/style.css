@@ -4,6 +4,7 @@
 
 #wp-admin-bar-wp-logo .ab-item [class*="dashicons-"] {
     font-size: 20px;
+    line-height: 32px;
 }
 
 #wp-admin-bar-wp-logo .ab-item [class*="dashicons-"]:before {
