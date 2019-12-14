@@ -32,16 +32,10 @@ if (!class_exists('reboot_acf_hooks')) {
 
         function google_map_api($api)
         {
-            /**
-             * Get API Key from Ultimate VC Addons
-             *
-             * So we do not need to update that key in code.
-             *
-             * Nice :)
-             */
+            $key = reboot_get_google_map_api_key();
 
-            if(function_exists('bsf_get_option')) {
-                $api['key'] = bsf_get_option('map_key');
+            if (!empty($key)) {
+                $api['key'] = $key;
             }
 
             return $api;
