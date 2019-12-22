@@ -1,11 +1,12 @@
 @font-face {
   font-family: 'dashicons-reboot';
   src:
-    url('fonts/dashicons-reboot.ttf?al79pf') format('truetype'),
-    url('fonts/dashicons-reboot.woff?al79pf') format('woff'),
-    url('fonts/dashicons-reboot.svg?al79pf#dashicons-reboot') format('svg');
+    url('fonts/dashicons-reboot.ttf?vov8b2') format('truetype'),
+    url('fonts/dashicons-reboot.woff?vov8b2') format('woff'),
+    url('fonts/dashicons-reboot.svg?vov8b2#dashicons-reboot') format('svg');
   font-weight: normal;
   font-style: normal;
+  font-display: block;
 }
 
 [class^="dashicons-reboot-"], [class*=" dashicons-reboot-"] {
@@ -23,6 +24,12 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.dashicons-reboot-clickcarrot:before {
+  content: "\e904";
+}
+.dashicons-reboot-click-carrot:before {
+  content: "\e904";
+}
 .dashicons-reboot-brain-work:before {
   content: "\e902";
 }
