@@ -1,15 +1,15 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Reboot Core\n"
-"POT-Creation-Date: 2019-05-06 17:06+0300\n"
-"PO-Revision-Date: 2019-05-06 17:06+0300\n"
+"POT-Creation-Date: 2019-12-17 03:44+0300\n"
+"PO-Revision-Date: 2019-12-17 03:44+0300\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: tr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 2.2.1\n"
+"X-Generator: Poedit 2.2.4\n"
 "X-Poedit-Basepath: ..\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Poedit-Flags-xgettext: --add-comments=translators:\n"
@@ -25,9 +25,19 @@ msgstr ""
 msgid "No files selected"
 msgstr "Dosya seçilmedi"
 
-#: classes/reboot_acf_hooks.php:25
+#: classes/reboot_acf_hooks.php:26
 #, php-format
 msgid "%s value is invalid"
+msgstr ""
+
+#: classes/reboot_additional_user_settings.php:25
+msgid "Custom Profile Picture (Avatar)"
+msgstr ""
+
+#: classes/reboot_additional_user_settings.php:53
+#: shortcodes/reboot_print_media/params.php:56
+#: shortcodes/reboot_print_media/params.php:65
+msgid "Additional Settings"
 msgstr ""
 
 #: classes/reboot_admin_bar_menu.php:26
@@ -63,170 +73,171 @@ msgstr ""
 msgid "Install recommended %s plugins"
 msgstr "Önerilen %s eklentilerini yükle"
 
-#: classes/reboot_custom_login.php:33 classes/reboot_custom_login.php:34
+#: classes/reboot_custom_login.php:38 classes/reboot_custom_login.php:39
 msgid "Custom Login"
 msgstr "Özel Giriş Ekranı"
 
-#: classes/reboot_custom_post_types_and_taxonomies.php:109
+#: classes/reboot_custom_post_types_and_taxonomies.php:116
+#: classes/reboot_vc_row_template.php:49
 #: shortcodes/reboot_acf_frontend_form/params.php:18
-#: shortcodes/reboot_template/params.php:18
+#: shortcodes/reboot_template/params.php:14
 #: widgets/REBOOT_Widget_Blocks/hooks.php:41
 msgid "Block"
 msgstr "Blok"
 
-#: classes/reboot_custom_post_types_and_taxonomies.php:110
+#: classes/reboot_custom_post_types_and_taxonomies.php:117
 #: widgets/REBOOT_Widget_Blocks/hooks.php:22
 msgid "Blocks"
 msgstr "Bloklar"
 
-#: classes/reboot_custom_post_types_and_taxonomies.php:190
-#: classes/reboot_custom_post_types_and_taxonomies.php:192
-#: classes/reboot_custom_post_types_and_taxonomies.php:234
+#: classes/reboot_custom_post_types_and_taxonomies.php:196
+#: classes/reboot_custom_post_types_and_taxonomies.php:198
+#: classes/reboot_custom_post_types_and_taxonomies.php:240
 #, php-format
 msgid "Add New %s"
 msgstr "Yeni %s Ekle"
 
-#: classes/reboot_custom_post_types_and_taxonomies.php:191
-#: classes/reboot_custom_post_types_and_taxonomies.php:231
+#: classes/reboot_custom_post_types_and_taxonomies.php:197
+#: classes/reboot_custom_post_types_and_taxonomies.php:237
 #, php-format
 msgid "Edit %s"
 msgstr "%s Girdisini Düzenle"
 
-#: classes/reboot_custom_post_types_and_taxonomies.php:193
-#: classes/reboot_custom_post_types_and_taxonomies.php:194
-#: classes/reboot_custom_post_types_and_taxonomies.php:232
+#: classes/reboot_custom_post_types_and_taxonomies.php:199
+#: classes/reboot_custom_post_types_and_taxonomies.php:200
+#: classes/reboot_custom_post_types_and_taxonomies.php:238
 #, php-format
 msgid "View %s"
 msgstr "%s Girdisini Göster"
 
-#: classes/reboot_custom_post_types_and_taxonomies.php:195
-#: classes/reboot_custom_post_types_and_taxonomies.php:238
+#: classes/reboot_custom_post_types_and_taxonomies.php:201
+#: classes/reboot_custom_post_types_and_taxonomies.php:244
 #, php-format
 msgid "Search %s"
 msgstr "%s Girdilerinde Ara"
 
-#: classes/reboot_custom_post_types_and_taxonomies.php:196
+#: classes/reboot_custom_post_types_and_taxonomies.php:202
 #, php-format
 msgid "No %s found"
 msgstr "%s bulunamadı"
 
-#: classes/reboot_custom_post_types_and_taxonomies.php:197
+#: classes/reboot_custom_post_types_and_taxonomies.php:203
 #, php-format
 msgid "No %s found in Trash"
 msgstr "Çöpte %s bulunamadı"
 
-#: classes/reboot_custom_post_types_and_taxonomies.php:198
-#: classes/reboot_custom_post_types_and_taxonomies.php:237
+#: classes/reboot_custom_post_types_and_taxonomies.php:204
+#: classes/reboot_custom_post_types_and_taxonomies.php:243
 #, php-format
 msgid "Parent %s:"
 msgstr "Üst %s:"
 
-#: classes/reboot_custom_post_types_and_taxonomies.php:203
+#: classes/reboot_custom_post_types_and_taxonomies.php:209
 #, php-format
 msgid "%s Archives"
 msgstr ""
 
-#: classes/reboot_custom_post_types_and_taxonomies.php:204
+#: classes/reboot_custom_post_types_and_taxonomies.php:210
 #, php-format
 msgid "%s Attributes"
-msgstr ""
+msgstr "%s Özellikleri"
 
-#: classes/reboot_custom_post_types_and_taxonomies.php:205
+#: classes/reboot_custom_post_types_and_taxonomies.php:211
 #, php-format
 msgid "Insert into %s"
 msgstr ""
 
-#: classes/reboot_custom_post_types_and_taxonomies.php:206
+#: classes/reboot_custom_post_types_and_taxonomies.php:212
 #, php-format
 msgid "Uploaded to this %s"
 msgstr ""
 
-#: classes/reboot_custom_post_types_and_taxonomies.php:212
+#: classes/reboot_custom_post_types_and_taxonomies.php:218
 #, php-format
 msgid "Filter %s list"
 msgstr ""
 
-#: classes/reboot_custom_post_types_and_taxonomies.php:213
+#: classes/reboot_custom_post_types_and_taxonomies.php:219
 #, php-format
 msgid "%s list navigation"
 msgstr ""
 
-#: classes/reboot_custom_post_types_and_taxonomies.php:214
+#: classes/reboot_custom_post_types_and_taxonomies.php:220
 #, php-format
 msgid "%s list"
 msgstr ""
 
-#: classes/reboot_custom_post_types_and_taxonomies.php:216
+#: classes/reboot_custom_post_types_and_taxonomies.php:222
 #, php-format
 msgid "%s published."
 msgstr ""
 
-#: classes/reboot_custom_post_types_and_taxonomies.php:217
+#: classes/reboot_custom_post_types_and_taxonomies.php:223
 #, php-format
 msgid "%s published privately."
 msgstr ""
 
-#: classes/reboot_custom_post_types_and_taxonomies.php:218
+#: classes/reboot_custom_post_types_and_taxonomies.php:224
 #, php-format
 msgid "%s reverted to draft."
 msgstr ""
 
-#: classes/reboot_custom_post_types_and_taxonomies.php:219
+#: classes/reboot_custom_post_types_and_taxonomies.php:225
 #, php-format
 msgid "%s scheduled."
 msgstr ""
 
-#: classes/reboot_custom_post_types_and_taxonomies.php:220
+#: classes/reboot_custom_post_types_and_taxonomies.php:226
 #, php-format
 msgid "%s updated."
 msgstr ""
 
-#: classes/reboot_custom_post_types_and_taxonomies.php:230
+#: classes/reboot_custom_post_types_and_taxonomies.php:236
 #, php-format
 msgid "All %s"
 msgstr "Tüm %s"
 
-#: classes/reboot_custom_post_types_and_taxonomies.php:233
+#: classes/reboot_custom_post_types_and_taxonomies.php:239
 #, php-format
 msgid "Update %s"
 msgstr "%s Girdisini Güncelle"
 
-#: classes/reboot_custom_post_types_and_taxonomies.php:235
+#: classes/reboot_custom_post_types_and_taxonomies.php:241
 #, php-format
 msgid "New %s Name"
 msgstr "Yeni %s İsmi"
 
-#: classes/reboot_custom_post_types_and_taxonomies.php:236
+#: classes/reboot_custom_post_types_and_taxonomies.php:242
 #, php-format
 msgid "Parent %s"
 msgstr "Üst %s"
 
-#: classes/reboot_custom_post_types_and_taxonomies.php:239
+#: classes/reboot_custom_post_types_and_taxonomies.php:245
 #, php-format
 msgid "Popular %s"
 msgstr "Popüler %s"
 
-#: classes/reboot_custom_post_types_and_taxonomies.php:240
+#: classes/reboot_custom_post_types_and_taxonomies.php:246
 #, php-format
 msgid "Separate %s with commas"
 msgstr "%s girdilerini virgülle ayır"
 
-#: classes/reboot_custom_post_types_and_taxonomies.php:241
+#: classes/reboot_custom_post_types_and_taxonomies.php:247
 #, php-format
 msgid "Add or remove %s"
 msgstr "%s ekle ya da kaldır"
 
-#: classes/reboot_custom_post_types_and_taxonomies.php:242
+#: classes/reboot_custom_post_types_and_taxonomies.php:248
 #, php-format
 msgid "Choose from the most used %s"
 msgstr "Sık kullanılan %s girdilerinden seç"
 
-#: classes/reboot_custom_post_types_and_taxonomies.php:243
+#: classes/reboot_custom_post_types_and_taxonomies.php:249
 #, php-format
 msgid "No %s found."
 msgstr "%s bulunamadı."
 
-#: classes/reboot_custom_post_types_and_taxonomies.php:244
+#: classes/reboot_custom_post_types_and_taxonomies.php:250
 #, php-format
 msgid "← Back to %s"
 msgstr "← %s girdisine geri dön"
@@ -250,66 +261,281 @@ msgstr ""
 msgid "Flash based Photoshop like online image editing software"
 msgstr ""
 
-#: classes/reboot_dashboard_widgets.php:56
+#: classes/reboot_dashboard_widgets.php:58
 msgid "Service"
 msgstr "Servis"
 
-#: classes/reboot_dashboard_widgets.php:57
+#: classes/reboot_dashboard_widgets.php:59
 #: shortcodes/reboot_smart_link/params.php:29
 msgid "Link"
 msgstr "Bağlantı"
+
+#: classes/reboot_email_template.php:202
+#, php-format
+msgid "Error: %s"
+msgstr ""
+
+#: classes/reboot_email_template/views/_action.php:4
+#: shortcodes/reboot_print_media/view.php:58
+msgid "Action"
+msgstr ""
+
+#: classes/reboot_email_template/views/_social.php:11
+msgid "Follow Us"
+msgstr ""
+
+#: classes/reboot_faker.php:106 classes/reboot_faker.php:138
+#, php-format
+msgid "Missing: %s"
+msgstr ""
+
+#: classes/reboot_faker.php:113
+#, php-format
+msgid "Post exists: [%1$s](%2$s)"
+msgstr ""
+
+#: classes/reboot_faker.php:120 classes/reboot_faker.php:150
+#, php-format
+msgid "Couldn't create: %s"
+msgstr ""
+
+#: classes/reboot_faker.php:144
+#, php-format
+msgid "Term exists: [%1$s](%2$s)"
+msgstr ""
+
+#: classes/reboot_post_mime_types.php:19
+msgid "DOCs"
+msgstr ""
+
+#: classes/reboot_post_mime_types.php:19
+msgid "Manage DOCs"
+msgstr ""
+
+#: classes/reboot_post_mime_types.php:19
+#, php-format
+msgid "DOC <span class=\"count\">(%s)</span>"
+msgid_plural "DOC <span class=\"count\">(%s)</span>"
+msgstr[0] ""
+msgstr[1] ""
+
+#: classes/reboot_post_mime_types.php:20
+msgid "XLSs"
+msgstr ""
+
+#: classes/reboot_post_mime_types.php:20
+msgid "Manage XLSs"
+msgstr ""
+
+#: classes/reboot_post_mime_types.php:20
+#, php-format
+msgid "XLS <span class=\"count\">(%s)</span>"
+msgid_plural "XLSs <span class=\"count\">(%s)</span>"
+msgstr[0] ""
+msgstr[1] ""
+
+#: classes/reboot_post_mime_types.php:21
+msgid "PDFs"
+msgstr ""
+
+#: classes/reboot_post_mime_types.php:21
+msgid "Manage PDFs"
+msgstr ""
+
+#: classes/reboot_post_mime_types.php:21
+#, php-format
+msgid "PDF <span class=\"count\">(%s)</span>"
+msgid_plural "PDFs <span class=\"count\">(%s)</span>"
+msgstr[0] ""
+msgstr[1] ""
+
+#: classes/reboot_post_mime_types.php:22
+msgid "ZIPs"
+msgstr ""
+
+#: classes/reboot_post_mime_types.php:22
+msgid "Manage ZIPs"
+msgstr ""
+
+#: classes/reboot_post_mime_types.php:22
+#, php-format
+msgid "ZIP <span class=\"count\">(%s)</span>"
+msgid_plural "ZIPs <span class=\"count\">(%s)</span>"
+msgstr[0] ""
+msgstr[1] ""
 
 #: classes/reboot_theme_options.php:29 classes/reboot_theme_options.php:30
 msgid "Theme Options"
 msgstr "Tema Seçenekleri"
 
-#: classes/reboot_vc_common_param_condition.php:36
-#: shortcodes/reboot_template/params.php:29
-msgid "Condition"
-msgstr "Koşul"
+#: classes/reboot_vc_common_param_condition.php:49
+msgid "Expression"
+msgstr ""
 
-#: classes/reboot_vc_common_param_condition.php:39
-#: shortcodes/reboot_template/params.php:32
+#: classes/reboot_vc_common_param_condition.php:53
+#: classes/reboot_vc_common_param_condition.php:86
+#: shortcodes/reboot_template/params.php:47
 msgid ""
 "You can set some condition here like <code>{call:function_name}</code> or "
 "<code>{call:class_name->method_name}</code>. <br>You can send params like "
 "<code>{call:function_name(Param 1, Param 2)}</code>"
 msgstr ""
 
-#: classes/reboot_vc_common_param_condition.php:40
-#: shortcodes/reboot_template/params.php:33
+#: classes/reboot_vc_common_param_condition.php:54
+#: classes/reboot_vc_common_param_condition.php:76
+#: classes/reboot_vc_common_param_condition.php:91
+#: shortcodes/reboot_template/params.php:48
 #, php-format
 msgid "%s Condition"
 msgstr ""
 
+#: classes/reboot_vc_common_param_condition.php:59
+msgid "Compare"
+msgstr ""
+
+#: classes/reboot_vc_common_param_condition.php:62
+msgid "True"
+msgstr ""
+
+#: classes/reboot_vc_common_param_condition.php:63
+msgid "False"
+msgstr ""
+
+#: classes/reboot_vc_common_param_condition.php:64
+msgid "Empty"
+msgstr ""
+
+#: classes/reboot_vc_common_param_condition.php:65
+msgid "Not Empty"
+msgstr ""
+
+#: classes/reboot_vc_common_param_condition.php:66
+msgid "Equal"
+msgstr ""
+
+#: classes/reboot_vc_common_param_condition.php:67
+msgid "Not Equal"
+msgstr ""
+
+#: classes/reboot_vc_common_param_condition.php:71
+msgid "Select a comparison type."
+msgstr ""
+
+#: classes/reboot_vc_common_param_condition.php:82
+msgid "Value"
+msgstr ""
+
+#: classes/reboot_vc_common_param_extra_el_classes.php:18
+msgid "Has shadow"
+msgstr ""
+
 #: classes/reboot_vc_common_param_extra_el_classes.php:19
-#: classes/reboot_vc_common_param_extra_el_classes.php:23
-#: classes/reboot_vc_common_param_extra_el_classes.php:29
 msgid "White text color"
 msgstr ""
 
 #: classes/reboot_vc_common_param_extra_el_classes.php:20
-#: classes/reboot_vc_common_param_extra_el_classes.php:24
-#: classes/reboot_vc_common_param_extra_el_classes.php:30
 msgid "Has grayscale image hover"
 msgstr ""
 
+#: classes/reboot_vc_common_param_extra_el_classes.php:21
+msgid "Center at mobile"
+msgstr ""
+
+#: classes/reboot_vc_common_param_extra_el_classes.php:23
+msgid ""
+"Increase font sizes base (makes all child font sizes equal, probably 16px)"
+msgstr ""
+
+#: classes/reboot_vc_common_param_extra_el_classes.php:24
+msgid "Increase font sizes 1.25x"
+msgstr ""
+
 #: classes/reboot_vc_common_param_extra_el_classes.php:25
-msgid "Has two columns at mobile"
+msgid "Increase font sizes 1.5x"
 msgstr ""
 
 #: classes/reboot_vc_common_param_extra_el_classes.php:26
-#: classes/reboot_vc_common_param_extra_el_classes.php:31
+msgid "Increase font sizes 2x"
+msgstr ""
+
+#: classes/reboot_vc_common_param_extra_el_classes.php:27
+msgid "Increase font sizes 2.5x"
+msgstr ""
+
+#: classes/reboot_vc_common_param_extra_el_classes.php:28
+msgid "Increase font sizes 3x"
+msgstr ""
+
+#: classes/reboot_vc_common_param_extra_el_classes.php:36
+msgid "Has zigzag rows"
+msgstr ""
+
+#: classes/reboot_vc_common_param_extra_el_classes.php:37
+#: classes/reboot_vc_common_param_extra_el_classes.php:46
+#: classes/reboot_vc_common_param_extra_el_classes.php:54
+msgid "Reset top padding of columns"
+msgstr ""
+
+#: classes/reboot_vc_common_param_extra_el_classes.php:43
+msgid "Has two columns at mobile"
+msgstr ""
+
+#: classes/reboot_vc_common_param_extra_el_classes.php:44
+#: classes/reboot_vc_common_param_extra_el_classes.php:52
 msgid "Has one column under desktop"
 msgstr ""
 
-#: classes/reboot_vc_common_param_extra_el_classes.php:62
+#: classes/reboot_vc_common_param_extra_el_classes.php:45
+#: classes/reboot_vc_common_param_extra_el_classes.php:53
+msgid "Has white bg overlay under desktop"
+msgstr ""
+
+#: classes/reboot_vc_common_param_extra_el_classes.php:66
+msgid "Force full width single image"
+msgstr ""
+
+#: classes/reboot_vc_common_param_extra_el_classes.php:97
 msgid "Classes"
 msgstr ""
 
-#: classes/reboot_vc_common_param_extra_el_classes.php:65
+#: classes/reboot_vc_common_param_extra_el_classes.php:100
 #, php-format
 msgid "%s Classes"
+msgstr ""
+
+#: classes/reboot_vc_row_template.php:51 classes/reboot_vc_row_template.php:65
+#: shortcodes/reboot_acf_frontend_form/params.php:55
+#: shortcodes/reboot_template/params.php:32
+msgid "Select..."
+msgstr ""
+
+#: classes/reboot_vc_row_template.php:57
+#: shortcodes/reboot_template/params.php:19
+msgid "Select block."
+msgstr ""
+
+#: classes/reboot_vc_row_template.php:58 classes/reboot_vc_row_template.php:72
+#: shortcodes/reboot_template/params.php:55
+#, php-format
+msgid "%s Template"
+msgstr ""
+
+#: classes/reboot_vc_row_template.php:63
+#: shortcodes/reboot_template/params.php:30
+msgid "Formatter"
+msgstr ""
+
+#: classes/reboot_vc_row_template.php:71
+#: shortcodes/reboot_template/params.php:38
+msgid "Select formatter."
+msgstr ""
+
+#: functions/reboot_cf7_feedback.php:15
+msgid "The requested contact form was not found."
+msgstr ""
+
+#: functions/reboot_check_dependency.php:9
+msgid "Error!"
 msgstr ""
 
 #: functions/reboot_get_local_data.php:18
@@ -367,7 +593,9 @@ msgstr ""
 #: shortcodes/reboot_shortcode/params.php:9
 #: shortcodes/reboot_smart_link/params.php:9
 #: shortcodes/reboot_social_sharer/params.php:9
-#: shortcodes/reboot_template/params.php:9 shortcodes/reboot_year/params.php:9
+#: shortcodes/reboot_template/params.php:60
+#: shortcodes/reboot_the_content/params.php:9
+#: shortcodes/reboot_year/params.php:9
 #, php-format
 msgid "%s Elements"
 msgstr ""
@@ -376,25 +604,31 @@ msgstr ""
 msgid "Select ACF form."
 msgstr ""
 
-#: shortcodes/reboot_acf_frontend_form/params.php:29
-msgid "Submit Value"
+#: shortcodes/reboot_acf_frontend_form/params.php:28
+msgid "Post title?"
 msgstr ""
 
-#: shortcodes/reboot_acf_frontend_form/params.php:32
+#: shortcodes/reboot_acf_frontend_form/params.php:35
+#: shortcodes/reboot_post_list/params.php:19
+msgid "Post Type"
+msgstr ""
+
+#: shortcodes/reboot_acf_frontend_form/params.php:38
+#: shortcodes/reboot_acf_frontend_form/params.php:47
 #: shortcodes/reboot_acf_frontend_form/view.php:12
 #: tgmpa/class-tgm-plugin-activation.php:2816
 msgid "Update"
 msgstr ""
 
-#: shortcodes/reboot_acf_frontend_form/params.php:37
+#: shortcodes/reboot_acf_frontend_form/params.php:44
+msgid "Submit Value"
+msgstr ""
+
+#: shortcodes/reboot_acf_frontend_form/params.php:52
 msgid "Success Page (Redirect)"
 msgstr ""
 
-#: shortcodes/reboot_acf_frontend_form/params.php:40
-msgid "Select..."
-msgstr ""
-
-#: shortcodes/reboot_acf_frontend_form/params.php:47
+#: shortcodes/reboot_acf_frontend_form/params.php:62
 msgid "Select page to redirect after success."
 msgstr ""
 
@@ -409,10 +643,6 @@ msgstr ""
 msgid "Simple post list from any post type with optional taxonomy terms"
 msgstr ""
 
-#: shortcodes/reboot_post_list/params.php:19
-msgid "Post Type"
-msgstr ""
-
 #: shortcodes/reboot_post_list/params.php:27
 msgid "Count"
 msgstr ""
@@ -425,7 +655,7 @@ msgstr ""
 msgid "Terms"
 msgstr ""
 
-#: shortcodes/reboot_post_list/view.php:32
+#: shortcodes/reboot_post_list/view.php:33
 #, php-format
 msgid "No %s items found."
 msgstr ""
@@ -455,11 +685,6 @@ msgstr ""
 msgid "Add description column?"
 msgstr ""
 
-#: shortcodes/reboot_print_media/params.php:56
-#: shortcodes/reboot_print_media/params.php:65
-msgid "Additional Settings"
-msgstr ""
-
 #: shortcodes/reboot_print_media/params.php:62
 msgid "Action Content"
 msgstr ""
@@ -484,10 +709,6 @@ msgstr ""
 #: shortcodes/reboot_print_media/view.php:56
 #: shortcodes/reboot_smart_link/params.php:51
 msgid "Description"
-msgstr ""
-
-#: shortcodes/reboot_print_media/view.php:58
-msgid "Action"
 msgstr ""
 
 #: shortcodes/reboot_print_media/view.php:125
@@ -562,17 +783,29 @@ msgstr ""
 msgid "Linkedin"
 msgstr ""
 
-#: shortcodes/reboot_template/params.php:4
-#, php-format
-msgid "%s Template"
+#: shortcodes/reboot_template/params.php:24
+msgid "Disable wrapper"
 msgstr ""
 
-#: shortcodes/reboot_template/params.php:5
+#: shortcodes/reboot_template/params.php:44
+msgid "Condition"
+msgstr "Koşul"
+
+#: shortcodes/reboot_template/params.php:56
 msgid "Prints custom block template"
 msgstr ""
 
-#: shortcodes/reboot_template/params.php:23
-msgid "Select block."
+#: shortcodes/reboot_the_content/params.php:4
+#, php-format
+msgid "%s The Content"
+msgstr ""
+
+#: shortcodes/reboot_the_content/params.php:5
+msgid "Prints post content"
+msgstr ""
+
+#: shortcodes/reboot_the_content/params.php:18
+msgid "Disable auto paragraphs"
 msgstr ""
 
 #: shortcodes/reboot_year/params.php:4
@@ -598,7 +831,7 @@ msgstr ""
 msgid "Install Required Plugins"
 msgstr ""
 
-#: tgmpa/class-tgm-plugin-activation.php:335 tgmpa/config.php:288
+#: tgmpa/class-tgm-plugin-activation.php:335 tgmpa/config.php:297
 msgid "Install Plugins"
 msgstr ""
 
@@ -1035,17 +1268,17 @@ msgstr ""
 msgid "Installing Plugin %1$s (%2$d/%3$d)"
 msgstr ""
 
-#: tgmpa/config.php:232
+#: tgmpa/config.php:241
 msgid "You have to install all required plugins!"
 msgstr ""
 
-#: tgmpa/config.php:282
+#: tgmpa/config.php:291
 msgid ""
 "If you want to hide this message constantly you have to install all "
 "<u>required</u> plugins!"
 msgstr ""
 
-#: tgmpa/config.php:287
+#: tgmpa/config.php:296
 #, php-format
 msgid "Install Recomenned %s Plugins"
 msgstr ""
@@ -1083,3 +1316,7 @@ msgstr ""
 #. Author URI of the plugin/theme
 msgid "https://reboot.com.tr"
 msgstr ""
+
+#, php-format
+#~ msgid "Edit asd %s"
+#~ msgstr "Düzenle %s"
