@@ -1,0 +1,5 @@
+.c-reboot-video video {
+    width: 100% !important;
+    height: auto !important;
+    vertical-align: top;
+}

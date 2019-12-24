@@ -12,7 +12,7 @@ if (!class_exists('reboot_additional_user_settings')) {
         function __construct()
         {
             add_action('acf/init', [$this, 'add_additional_user_settings']);
-            add_filter('pre_get_avatar_data', [$this, 'get_avatar'], 2, 99);
+            add_filter('pre_get_avatar_data', [$this, 'get_avatar'], 99, 2);
         }
 
         public function add_additional_user_settings()
