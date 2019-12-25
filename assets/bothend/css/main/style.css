@@ -160,3 +160,14 @@
     width: 100% !important;
     height: auto !important;
 }
+
+/**
+ * clearfix
+ */
+
+.u-clearfix:before,
+.u-clearfix:after {
+    content: "";
+    display: table;
+    clear: both;
+}

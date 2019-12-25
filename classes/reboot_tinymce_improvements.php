@@ -8,9 +8,13 @@ if (!class_exists('reboot_tinymce_improvements')) {
 
     class reboot_tinymce_improvements
     {
+        static $collections = [];
 
         function __construct()
         {
+            // External plugins
+            add_filter( 'mce_external_plugins', [$this, 'add_plugins'], 999 );
+
             // Register our callback to the appropriate filter
             add_filter( 'mce_buttons_2', [$this, 'mce_buttons_2'], 999 );
 
@@ -25,9 +29,68 @@ if (!class_exists('reboot_tinymce_improvements')) {
             add_action( 'admin_enqueue_scripts', [$this, 'bothend_enqueue_scripts'], 999 );
         }
 
+        function get_mce_plugins() {
+            if(isset(self::$collections['mce_plugins'])) {
+                return self::$collections['mce_plugins'];
+            }
+
+            $mce_plugins = reboot_get_file_paths_by_folder(REBOOT_ASSETS_PATH, REBOOT_ASSETS_URL, 'backend/mce', 'plugin.js');
+            $child_mce_plugins = reboot_get_file_paths_by_folder(REBOOT_CHILD_PATH, REBOOT_CHILD_URL, REBOOT_DIRECTORY_NAME . '/assets/backend/mce', 'plugin.js');
+
+            self::$collections['mce_plugins'] =  array_merge($mce_plugins, $child_mce_plugins);
+
+            return self::$collections['mce_plugins'];
+        }
+
+        function get_mce_buttons() {
+            $buttons = [];
+
+            $mce_plugins = $this->get_mce_plugins();
+
+            if (!empty($mce_plugins)) {
+                foreach ($mce_plugins as $file) {
+                    $plugins = reboot_read_config($file['base_path'] . 'config.json', 'plugins', []);
+                    if(!empty($plugins)) {
+                        foreach ($plugins as $plugin) {
+                            $buttons = array_merge($buttons, $plugin['buttons']);
+                        }
+                    }
+                }
+            }
+
+            return $buttons;
+        }
+
+        function add_plugins($plugins_array) {
+            $mce_plugins = $this->get_mce_plugins();
+
+            if (!empty($mce_plugins)) {
+                foreach ($mce_plugins as $file) {
+                    $plugins = reboot_read_config($file['base_path'] . 'config.json', 'plugins', []);
+                    if(!empty($plugins)) {
+                        foreach ($plugins as $plugin) {
+                            $plugins_array[ $plugin['id'] ] = $file['file_url'];
+                        }
+                    }
+                }
+            }
+
+            return $plugins_array;
+        }
+
         // Callback function to insert 'styleselect' into the $buttons array
         function mce_buttons_2( $buttons ) {
             array_unshift( $buttons, 'styleselect' );
+
+            // $buttons = array_merge($buttons, $this->get_mce_buttons());
+            $mce_buttons = $this->get_mce_buttons();
+
+            if(!empty($mce_buttons)) {
+                foreach ($mce_buttons as $mce_button) {
+                    $buttons[] = $mce_button;
+                }
+            }
+
             return $buttons;
         }
 

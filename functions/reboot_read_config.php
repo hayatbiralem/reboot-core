@@ -16,7 +16,15 @@ if (!function_exists('reboot_read_config')) {
         }
 
         if (array_key_exists($file, $reboot_read_config_collection)) {
-            return $reboot_read_config_collection[$file];
+            if(!empty($reboot_read_config_collection[$file]) && !empty($key)) {
+                if(isset($reboot_read_config_collection[$file][$key]) && !empty($reboot_read_config_collection[$file][$key])) {
+                    return $reboot_read_config_collection[$file][$key];
+                } else {
+                    return $default;
+                }
+            } else {
+                return $reboot_read_config_collection[$file];
+            }
         }
 
         if (file_exists($file)) {
@@ -36,6 +44,7 @@ if (!function_exists('reboot_read_config')) {
         }
 
         if(!empty($reboot_read_config_collection[$file]) && !empty($key)) {
+
             if(isset($reboot_read_config_collection[$file][$key]) && !empty($reboot_read_config_collection[$file][$key])) {
                 return $reboot_read_config_collection[$file][$key];
             } else {
