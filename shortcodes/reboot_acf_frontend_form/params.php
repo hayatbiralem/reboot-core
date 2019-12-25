@@ -14,8 +14,17 @@ return array(
          */
 
         array(
+            'type' => 'textfield',
+            'heading' => __('Post ID', REBOOT_CORE_TEXT_DOMAIN),
+            'std' => '',
+            'admin_label' => true,
+            'param_name' => 'post_id',
+            'description' => __('Set Post ID.', REBOOT_CORE_TEXT_DOMAIN),
+        ),
+
+        array(
             'type' => 'dropdown',
-            'heading' => __('Block', REBOOT_CORE_TEXT_DOMAIN),
+            'heading' => __('Form ID', REBOOT_CORE_TEXT_DOMAIN),
             'value' => reboot_get_post_ids('acf-field-group'),
             'std' => '',
             'admin_label' => true,

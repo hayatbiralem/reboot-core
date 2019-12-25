@@ -30,6 +30,7 @@ if(!class_exists('reboot_theme_options')) {
                 'menu_title'	=> __('Theme Options', REBOOT_CORE_TEXT_DOMAIN),
                 'menu_slug'	=> $this->menu_slug,
                 'parent_slug'	=> REBOOT_AGENCY_SLUG,
+                'capability' => 'edit_themes',
             ));
         }
 

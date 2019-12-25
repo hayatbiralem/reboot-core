@@ -48,6 +48,8 @@ if(!class_exists('reboot_dashboard_widgets')) {
                 ],
             ];
 
+            $services = apply_filters('reboot_useful_links', $services);
+
             ?>
             <div class="reboot-dashboard-links-table">
                 <table class="widefat striped fixed_">

@@ -81,6 +81,8 @@ if (!class_exists('reboot_front_end_scripts')) {
                     if($first) {
                         $first = false;
                         wp_localize_script( $handle, 'reboot_core', [
+                            'ajax_url' => admin_url( 'admin-ajax.php' ),
+                            'security'  => wp_create_nonce( REBOOT_NONCE_KEY ),
                             'current_url' => add_query_arg(),
                         ] );
                     }
