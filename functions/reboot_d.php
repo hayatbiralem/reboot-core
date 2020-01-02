@@ -20,7 +20,7 @@ if (!function_exists('reboot_d')) {
 
         ob_start();
         echo '<pre>';
-        var_export($var);
+        echo htmlspecialchars(var_export($var, true));
         echo '</pre>';
         $output = ob_get_clean();
 
