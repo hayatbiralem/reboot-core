@@ -17,6 +17,7 @@ if (!class_exists('reboot_vc_row_template')) {
             self::$tags = [
                 'vc_section',
                 'vc_row',
+                'vc_row_inner',
             ];
 
             add_action('vc_after_init', array($this, 'add_params'), 10, 0);
