@@ -114,7 +114,7 @@ if (!class_exists('reboot_custom_post_types_and_taxonomies')) {
                     ],
                     'args' => [
                         'supports' => ['title', 'editor', 'thumbnail'],
-                        'labels' => self::get_post_type_labels(
+                        'labels' => reboot_custom_post_types_and_taxonomies::get_post_type_labels(
                             __('Block', REBOOT_CORE_TEXT_DOMAIN),
                             __('Blocks', REBOOT_CORE_TEXT_DOMAIN)
                         ),

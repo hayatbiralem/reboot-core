@@ -1,0 +1,18 @@
+.c-space:before {
+    content: "";
+    display: block;
+}
+
+.c-space--small:before { padding-bottom: 7.5px; }
+.c-space--medium:before { padding-bottom: 15px; }
+.c-space--large:before { padding-bottom: 30px; }
+.c-space--huge:before { padding-bottom: 60px; }
+
+@media (min-width: 768px) {
+    .c-space--small:before { padding-bottom: 15px; }
+    .c-space--medium:before { padding-bottom: 30px; }
+    .c-space--large:before { padding-bottom: 60px; }
+    .c-space--huge:before { padding-bottom: 120px; }
+}
+
+

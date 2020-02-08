@@ -1,0 +1,39 @@
+.c-image,
+.c-image__picture {
+    display: block;
+}
+
+.c-image__picture {
+    position: relative;
+    overflow: hidden;
+}
+
+.c-image__picture:before {
+    content: "";
+    display: block;
+    padding-bottom: 56.25%;
+}
+
+.c-image__img {
+    position: absolute;
+    left: 0;
+    top: 0;
+
+    width: 100%;
+    height: auto;
+    vertical-align: top;
+}
+
+/**
+ * Repositioning glitch fix
+ */
+
+[data-vc-stretch-content="true"] > .wpb_column,
+.c-image__img {
+    opacity: 0;
+}
+
+.is-responsive-images-ready .c-image__img,
+.is-responsive-images-ready [data-vc-stretch-content="true"] > .wpb_column {
+    opacity: 1;
+}
