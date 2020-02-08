@@ -137,7 +137,7 @@
 
         // dynamic selectors
         $('[class*="' + prefix + '' + separator + '"]').each(function () {
-            var regex = new RegExp(prefix + '' + separator + '([^\s]+)');
+            var regex = new RegExp(prefix + '' + separator + '([^\\s]+)');
             var classes = $(this).attr('class');
             var results = regex.exec(classes);
             if (results && results[1] && pool.indexOf(results[1]) === -1) {

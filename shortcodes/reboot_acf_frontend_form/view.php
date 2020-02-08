@@ -8,15 +8,28 @@ $args = [
         'post_status'		=> 'publish'
     ),
     'updated_message' => false,
-    'field_groups' => [$id],
+    'field_groups' => explode(',', $id),
     'submit_value' => $submit_value ?: __("Update", REBOOT_CORE_TEXT_DOMAIN),
     'html_submit_button'	=> '<button type="submit" class="default-btn-shortcode dt-btn dt-btn-m"><span>%s</span></button>',
 ];
 
+if(isset($post_id) && !empty($post_id)) {
+    if($post_id == 'current') {
+        $args['post_id'] = get_the_ID();
+    } else {
+        $args['post_id'] = $post_id;
+    }
+}
+
 if(!empty($redirect)) {
-    $url = get_permalink($redirect);
-    if($url) {
-        $args['return'] = $url;
+    if(is_numeric($redirect)) {
+        $return = get_permalink($redirect);
+    } else {
+        $return = $redirect;
+    }
+
+    if($return) {
+        $args['return'] = $return;
     }
 }
 
