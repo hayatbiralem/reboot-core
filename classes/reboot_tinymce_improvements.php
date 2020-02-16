@@ -107,6 +107,13 @@ if (!class_exists('reboot_tinymce_improvements')) {
                 ),
 
                 array(
+                    'title' => 'Small',
+                    'inline' => 'small',
+                    'classes' => 'r-es-small',
+                    'wrapper' => false,
+                ),
+
+                array(
                     'title' => '> Centered Block <',
                     'block' => 'p',
                     'classes' => 'r-es-centered',
