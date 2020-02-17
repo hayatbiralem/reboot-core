@@ -20,38 +20,37 @@ if (!class_exists('reboot_vc_common_param_extra_el_classes')) {
                 __('Has grayscale image hover') => 'has-grayscale-image-hover',
                 __('Center at mobile') => 'u-center-at-mobile',
 
-                __('Increase font sizes base (makes all child font sizes equal, probably 16px)') => 'increase-font-sizes',
-                __('Increase font sizes 1.25x') => 'increase-font-sizes-1dot25x',
-                __('Increase font sizes 1.5x') => 'increase-font-sizes-1dot5x',
-                __('Increase font sizes 2x') => 'increase-font-sizes-2x',
-                __('Increase font sizes 2.5x') => 'increase-font-sizes-2dot5x',
-                __('Increase font sizes 3x') => 'increase-font-sizes-3x',
-
+//                __('Increase font sizes base (makes all child font sizes equal, probably 16px)') => 'increase-font-sizes',
+//                __('Increase font sizes 1.25x') => 'increase-font-sizes-1dot25x',
+//                __('Increase font sizes 1.5x') => 'increase-font-sizes-1dot5x',
+//                __('Increase font sizes 2x') => 'increase-font-sizes-2x',
+//                __('Increase font sizes 2.5x') => 'increase-font-sizes-2dot5x',
+//                __('Increase font sizes 3x') => 'increase-font-sizes-3x',
             ];
 
             self::$tags = [
                 'vc_section' => array_merge(
                     $common_container_classes,
                     [
-                        __('Has zigzag rows') => 'has-zigzag-rows',
-                        __('Reset top padding of columns') => 'reset-top-padding-of-columns',
+//                        __('Has zigzag rows') => 'has-zigzag-rows',
+//                        __('Reset top padding of columns') => 'reset-top-padding-of-columns',
                     ]
                 ),
                 'vc_row' => array_merge(
                     $common_container_classes,
                     [
-                        __('Has two columns at mobile') => 'has-two-columns-at-mobile',
-                        __('Has one column under desktop') => 'has-one-column-under-desktop',
-                        __('Has white bg overlay under desktop') => 'has-white-bg-overlay-under-desktop',
-                        __('Reset top padding of columns') => 'reset-top-padding-of-columns',
+//                        __('Has two columns at mobile') => 'has-two-columns-at-mobile',
+//                        __('Has one column under desktop') => 'has-one-column-under-desktop',
+//                        __('Has white bg overlay under desktop') => 'has-white-bg-overlay-under-desktop',
+//                        __('Reset top padding of columns') => 'reset-top-padding-of-columns',
                     ]
                 ),
                 'vc_row_inner' => array_merge(
                     $common_container_classes,
                     [
-                        __('Has one column under desktop') => 'has-one-column-under-desktop',
-                        __('Has white bg overlay under desktop') => 'has-white-bg-overlay-under-desktop',
-                        __('Reset top padding of columns') => 'reset-top-padding-of-columns',
+//                        __('Has one column under desktop') => 'has-one-column-under-desktop',
+//                        __('Has white bg overlay under desktop') => 'has-white-bg-overlay-under-desktop',
+//                        __('Reset top padding of columns') => 'reset-top-padding-of-columns',
                     ]
                 ),
                 'vc_column' => array_merge(
@@ -63,7 +62,7 @@ if (!class_exists('reboot_vc_common_param_extra_el_classes')) {
                     []
                 ),
                 'vc_single_image' => [
-                    __('Force full width single image') => 'force-full-width-single-image',
+//                    __('Force full width single image') => 'force-full-width-single-image',
                 ],
             ];
 
