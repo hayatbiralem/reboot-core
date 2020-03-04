@@ -78,19 +78,21 @@ if (!class_exists('reboot_vc_shortcode')) {
         {
             if(isset($this->data['base_path']) && !empty($this->data['base_path'])) {
 
-                if(file_exists($this->data['base_path'] . 'style.css')) {
+                $path = $this->data['base_path'] . 'style.css';
+                if(file_exists($path)) {
                     $url = $this->data['base_url'] . 'style.css';
                     if(!in_array($url, self::$scripts)) {
                         self::$scripts[] = $url;
-                        printf('<link href="%s" rel="stylesheet">', $url);
+                        printf('<link href="%s?v=%s" rel="stylesheet">', $url, md5_file($path));
                     }
                 }
 
-                if(file_exists($this->data['base_path'] . 'script.js')) {
+                $path = $this->data['base_path'] . 'script.js';
+                if(file_exists($path)) {
                     $url = $this->data['base_url'] . 'script.js';
                     if(!in_array($url, self::$scripts)) {
                         self::$scripts[] = $url;
-                        printf('<script src="%s"></script>', $url);
+                        printf('<script src="%s?v=%s"></script>', $url, md5_file($path));
                     }
                 }
 

@@ -1,0 +1,6 @@
+{
+  "deps" : [
+    "jquery",
+    "ultimate-row-bg"
+  ]
+}

@@ -12,17 +12,19 @@ if (!function_exists('reboot_d')) {
      * @param bool $echo
      * @return mixed
      */
-    function reboot_d($var, $param_to_check = null, $return = false)
+    function reboot_d($var, $param_to_check = null, $return = false, $escape_html = true)
     {
         if(!reboot_request_has_param($param_to_check)) {
             return false;
         }
 
-        ob_start();
-        echo '<pre>';
-        var_export($var);
-        echo '</pre>';
-        $output = ob_get_clean();
+        $output = var_export($var, true);
+
+        if($escape_html) {
+            $output = htmlentities($output);
+        }
+
+        $output = sprintf('<pre>%s</pre>', $output);
 
         if($return) {
             return $output;

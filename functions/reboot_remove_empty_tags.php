@@ -56,7 +56,7 @@ if (!function_exists('reboot_remove_empty_tags_v2')) {
 
         $html = $doc->saveHTML();
 
-        return $html;
+        return reboot_extract_body_from_html_string($html);
     }
 
 }

@@ -3,7 +3,6 @@
 if (!defined('ABSPATH')) {
     exit('No direct script access allowed');
 }
-
 if (!class_exists('reboot_additional_user_settings')) {
 
     class reboot_additional_user_settings
@@ -47,7 +46,7 @@ if (!class_exists('reboot_additional_user_settings')) {
                 );
 
                 $fields = apply_filters('reboot_additional_user_settings', $fields);
-                
+
                 acf_add_local_field_group(array(
                     'key' => 'group_5d6ec7b2a165b',
                     'title' => __('Additional Settings'),
@@ -101,3 +100,4 @@ if (!class_exists('reboot_additional_user_settings')) {
     new reboot_additional_user_settings();
 
 }
+

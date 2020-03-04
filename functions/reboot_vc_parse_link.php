@@ -8,7 +8,7 @@ if(!function_exists('reboot_vc_parse_link')) {
      * @param $url
      * @return array
      */
-    function reboot_vc_parse_link($link)
+    function reboot_vc_parse_link($link, $fallback_url = '')
     {
 //        $url_args = [];
 //
@@ -26,6 +26,11 @@ if(!function_exists('reboot_vc_parse_link')) {
         $link = trim( $link );
         $link = ( '||' === $link ) ? '' : $link;
         $link = vc_build_link( $link );
+
+        if(empty($link['url']) && !empty($fallback_url)) {
+            $link['url'] = $fallback_url;
+        }
+
         $result = false;
         if ( strlen( $link['url'] ) > 0 ) {
             $result = [];
