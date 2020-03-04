@@ -39,6 +39,7 @@ if (!class_exists('reboot_custom_login')) {
                 'menu_title' => __('Custom Login', REBOOT_CORE_TEXT_DOMAIN),
                 'menu_slug' => $this->menu_slug,
                 'parent_slug' => REBOOT_AGENCY_SLUG,
+                'capability' => 'edit_themes',
             ));
         }
 

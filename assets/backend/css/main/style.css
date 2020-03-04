@@ -24,3 +24,8 @@ span.vc_admin_label.admin_label_reboot_template[style*=inline] {
 span.vc_admin_label.admin_label_reboot_template[style*=inline]:before {
     content: "TOP ROW WILL VE REPLACED with ";
 }
+
+.acf-hl .acf-bl>li {
+    display: inline-block;
+    margin-right: 10px;
+}

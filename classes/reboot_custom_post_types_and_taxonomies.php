@@ -42,7 +42,9 @@ if (!class_exists('reboot_custom_post_types_and_taxonomies')) {
             $custom_post_types = $this->get_custom_post_types();
             if (!empty($custom_post_types)) {
                 foreach ($custom_post_types as $custom_post_type) {
-                    register_post_type($custom_post_type['name'], $custom_post_type['args']);
+                    if(!post_type_exists($custom_post_type['name'])) {
+                        register_post_type($custom_post_type['name'], $custom_post_type['args']);
+                    }
                 }
             }
         }
@@ -112,7 +114,7 @@ if (!class_exists('reboot_custom_post_types_and_taxonomies')) {
                     ],
                     'args' => [
                         'supports' => ['title', 'editor', 'thumbnail'],
-                        'labels' => self::get_post_type_labels(
+                        'labels' => reboot_custom_post_types_and_taxonomies::get_post_type_labels(
                             __('Block', REBOOT_CORE_TEXT_DOMAIN),
                             __('Blocks', REBOOT_CORE_TEXT_DOMAIN)
                         ),

@@ -40,8 +40,8 @@ if (!empty($image)) {
 
 if ($style == 'hero') {
 
+    $el_class .= ' c-box--height';
     if (!empty($height)) {
-        $el_class .= ' c-box--height';
 
         if(empty($mobile_ratio)) {
             $min_width = '0';
@@ -115,7 +115,6 @@ if (!empty($_content)) {
 }
 
 $permalink = '';
-
 if ($dynamic_content_enabled && !empty($entry_id)) {
 
     $entry = get_post($entry_id);
@@ -162,12 +161,12 @@ if (!empty($mobile_align)) {
 if (!empty($content_width)) {
     $el_class .= ' c-box--content-width';
     $css[] = sprintf('@media (min-width: 768px) { .c-box--%s .c-box__caption { width: %s; } }', $counter, $content_width);
-};
+}
 
 if (!empty($mobile_content_width)) {
     $el_class .= ' c-box--mobile-content-width';
     $css[] = sprintf('@media (max-width: 767px) { .c-box--%s .c-box__caption { width: %s; } }', $counter, $mobile_content_width);
-};
+}
 
 if ($mobile_hide_button_1 == 'yes') {
     $el_class .= ' c-box--mobile-hide-button-1';
@@ -176,7 +175,6 @@ if ($mobile_hide_button_1 == 'yes') {
 if ($mobile_hide_button_2 == 'yes') {
     $el_class .= ' c-box--mobile-hide-button-2';
 }
-
 
 // Actions
 
@@ -203,7 +201,7 @@ if (!empty($action)) {
 
             $buttons = do_shortcode(sprintf('[reboot_buttons button_1="%s" button_2="%s" size="%s" align="%s" full_width="%s" mobile_full_width="%s"]', $button_1, $button_2, $button_size, $align, $button_full_width, $mobile_button_full_width));
             $buttons = trim($buttons);
-            if (!empty($buttons)) {
+        if (!empty($buttons)) {
                 $content[] = sprintf('<div class="c-box__buttons">%s</div>', $buttons);
             }
 
